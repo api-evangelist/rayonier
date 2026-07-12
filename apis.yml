@@ -28,6 +28,8 @@ apis:
     description: >-
       The Rayonier API provides access to platform services and data for enterprise integration and automation.
 common:
+  - type: DomainSecurity
+    url: security/rayonier-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/Rayonier
   - type: LinkedIn
