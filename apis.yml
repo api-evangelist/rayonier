@@ -27,46 +27,152 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/rayonier.png
 tags:
-  - Timber
-  - Real-Estate
-  - Forest Products
+- Timber
+- Real-Estate
+- Forest Products
+- Geospatial
+- ArcGIS REST
+- Land Management
+- Hunting Leases
+- Forestry
 tags_raw:
-  - Timber
-  - Real Estate
-  - Forest Products
-description: >-
-  Rayonier is a major US corporation and Fortune 1000 company. The Rayonier API provides programmatic access to its platform services, data, and integrations for enterprise customers and partners.
+- Timber
+- Real Estate
+- Forest Products
+- Geospatial
+- ArcGIS REST
+- Land Management
+- Hunting Leases
+- Forestry
+description: 'Rayonier (NYSE: RYN) is a timberland real estate investment trust owning about 2 million acres in
+  the US South and Pacific Northwest. It publishes no developer program, SDK or OpenAPI, but it runs a self-hosted
+  ArcGIS Enterprise 11.5 instance at gis.rayonier.com whose Public and Hosted folders — 45 Feature and Map services,
+  102 layers covering fee ownership, hunting lease units, bee-lease sites, land-sale tracts, forest stand inventory
+  and wildfire overlays — answer anonymously over the GeoServices REST API and a SOAP/WSDL contract. Rayonier''s
+  own hunting, beekeeping and Raydient land-sales websites consume these services.'
 created: '2026-04-19'
-modified: '2026-04-19'
+modified: '2026-09-17'
 specificationVersion: '0.23'
 apis:
-  - aid: rayonier:rayonier-api
-    name: Rayonier API
-    tags:
-      - Timber
-      - Real-Estate
-      - Forest Products
-    tags_raw:
-      - Timber
-      - Real Estate
-      - Forest Products
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://api.rayonier.com
-    humanURL: https://developer.rayonier.com
-    properties:
-      - url: https://developer.rayonier.com/docs
-        type: Documentation
-    description: >-
-      The Rayonier API provides access to platform services and data for enterprise integration and automation.
+- aid: rayonier:rayonier-gis-services
+  name: Rayonier GIS Services (ArcGIS REST)
+  tags:
+  - Geospatial
+  - ArcGIS REST
+  - Timber
+  - Real-Estate
+  - Land Management
+  - Hunting Leases
+  - Forestry
+  - SOAP
+  tags_raw:
+  - Geospatial
+  - ArcGIS REST
+  - Timber
+  - Real Estate
+  - Land Management
+  - Hunting Leases
+  - Forestry
+  - SOAP
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://gis.rayonier.com/arcgis/rest/services
+  baseURL: https://gis.rayonier.com/arcgis/rest/services
+  description: 'Rayonier''s self-managed ArcGIS Enterprise 11.5 server (portalDeploymentType ArcGISEnterprise, single
+    tenant) on gis.rayonier.com. The Public folder (29 services) and Hosted folder (16 services) — 102 layers in
+    all — serve the service directory, layer schemas and attribute/spatial /query operations to anonymous callers;
+    the Utilities folder requires a portal token and there is no self-signup. Marquee layers: Rayonier fee ownership
+    (6,216 polygons), hunting recreational lease units with permit areas, access points, food plots and active timber
+    sales (the data behind rayonierhunting.com), bee-lease sites rebuilt nightly for rayonierbeekeeping.com, land-sale
+    tracts for Raydient Rural, US South forest stand inventory, and NIFC fire perimeters joined to Rayonier ownership.
+    Output is esriJSON, GeoJSON or PBF via f=; errors arrive inside HTTP 200 bodies. Each MapServer also serves
+    a WSDL 1.1 SOAP contract (55 operations) at /arcgis/services/<service>/MapServer?wsdl, saved verbatim here —
+    Rayonier publishes no OpenAPI, and the OGC WMS/WFS extensions are not enabled (400). Nine services advertise
+    editing capabilities; no write was attempted and none should be.'
+  properties:
+  - type: APIReference
+    url: https://gis.rayonier.com/arcgis/rest/services
+  - type: APIReference
+    url: https://gis.rayonier.com/arcgis/rest/services/Public?f=json
+  - type: APIReference
+    url: https://gis.rayonier.com/arcgis/rest/services/Hosted?f=json
+  - type: ArcGIS
+    url: arcgis/rayonier-arcgis-rest-info.json
+  - type: ArcGIS
+    url: arcgis/rayonier-arcgis-rest-services.json
+  - type: ArcGIS
+    url: arcgis/rayonier-arcgis-public-folder.json
+  - type: ArcGIS
+    url: arcgis/rayonier-arcgis-hosted-folder.json
+  - type: ArcGIS
+    url: arcgis/rayonier-arcgis-service-inventory.json
+  - type: ArcGIS
+    url: arcgis/rayonier-arcgis-layer-schemas.json
+  - type: ArcGIS
+    url: arcgis/rayonier-arcgis-portal-self.json
+  - type: ArcGIS
+    url: arcgis/rayonier-fee-ownership-featureserver.json
+  - type: ArcGIS
+    url: arcgis/rayonier-fee-ownership-layer0.json
+  - type: ArcGIS
+    url: arcgis/rayonier-hunting-rlu-permits-mapserver.json
+  - type: ArcGIS
+    url: arcgis/rayonier-beelease-mapserver.json
+  - type: ArcGIS
+    url: arcgis/rayonier-fire-perimeters-featureserver.json
+  - type: WSDL
+    url: wsdl/rayonier-fee-ownership-mapserver.wsdl
+  - type: WSDL
+    url: https://gis.rayonier.com/arcgis/services/Public/Rayonier_FEE_Ownership_Public/MapServer?wsdl
+  - type: Console
+    url: https://gis.rayonier.com/arcgis/rest/services/Public/Rayonier_FEE_Ownership_Public/FeatureServer/0/query
+  - type: Authentication
+    url: authentication/rayonier-authentication.yml
+  - type: Conventions
+    url: conventions/rayonier-conventions.yml
+  - type: ErrorCatalog
+    url: errors/rayonier-problem-types.yml
+  - type: DataModel
+    url: data-model/rayonier-data-model.yml
+  - type: X-MCPServerCandidate
+    url: mcp/rayonier-mcp.yml
+  - type: AgentSkill
+    url: skills/_index.yml
+  - type: RateLimits
+    url: rate-limits/rayonier-rate-limits.yml
+  features:
+  - ArcGIS Server 11.5 REST
+  - Anonymous read on Public and Hosted folders
+  - GeoJSON and PBF output
+  - SOAP/WSDL 1.1 per MapServer
+  - No OpenAPI, no OGC WMS/WFS
 common:
-  - type: DomainSecurity
-    url: security/rayonier-domain-security.yml
-  - type: GitHubOrganization
-    url: https://github.com/Rayonier
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/rayonier
-  - type: Website
-    url: https://www.rayonier.com
+- type: Website
+  url: https://www.rayonier.com
+- type: TermsOfService
+  url: https://www.rayonier.com/legal
+- type: PrivacyPolicy
+  url: https://www.rayonier.com/legal#privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/Rayonier
+- type: LinkedIn
+  url: https://www.linkedin.com/company/rayonier
+- type: DomainSecurity
+  url: security/rayonier-domain-security.yml
+- type: Packages
+  url: packages/rayonier-packages.yml
+- type: Lifecycle
+  url: lifecycle/rayonier-lifecycle.yml
+- type: Conformance
+  url: conformance/rayonier-conformance.yml
+- type: LLMsTxt
+  url: llms/rayonier-llms.txt
+- type: Plans
+  url: plans/rayonier-plans-pricing.yml
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-17'
+  status: enriched
+  artifacts_added: 25
+  pass: local-v3

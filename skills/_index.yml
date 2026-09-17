@@ -1,0 +1,12 @@
+generated: '2026-09-17'
+method: generated
+source: arcgis/rayonier-arcgis-service-inventory.json and conventions/rayonier-conventions.yml
+note: >-
+  Rayonier publishes no skills, AGENTS.md or llms.txt of its own (searched 2026-09-17). The one
+  skill below is grounded in ArcGIS REST operations verified callable anonymously; there is no
+  OpenAPI to cite operationIds from, so the operations are recorded as method + path.
+skills:
+  - name: rayonier-query-public-gis-services
+    file: rayonier-query-public-gis-services.md
+    api: rayonier:rayonier-gis-services
+    summary: Discover, size and page anonymous queries against the 45 public ArcGIS services on gis.rayonier.com.

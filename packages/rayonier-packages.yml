@@ -1,0 +1,30 @@
+generated: '2026-09-17'
+method: searched
+source: >-
+  registry.npmjs.org search, pypi.org/pypi/rayonier/json, crates.io, rubygems.org, nuget.org
+  search, and https://api.github.com/orgs/Rayonier/repos, all 2026-09-17.
+note: >-
+  No first-party client library exists for any Rayonier API. npm (0 results), PyPI (404),
+  crates.io (0), RubyGems (0) and NuGet (0) hold nothing named rayonier. The Rayonier GitHub
+  organization has two public repositories: Rayonier.github.io (a launcher for internal Shiny
+  forestry apps that "must have valid Rayonier credentials") and rSVS, an R package for USDA
+  Stand Visualization System rendering — first-party, but a forestry tool, not an API client,
+  so it is listed for the record and NOT counted as an SDK. The ArcGIS REST surface is reachable
+  with Esri's own generic clients (ArcGIS API for Python, ArcGIS Maps SDK for JavaScript), which
+  are Esri's packages, not Rayonier's. NO SDKs pointer is wired.
+package_count: 0
+sdk_count: 0
+packages: []
+related_first_party_code:
+  - name: rSVS
+    registry: github
+    url: https://github.com/Rayonier/rSVS
+    language: R
+    official: true
+    api_client: false
+    version: null
+    published: null
+    note: >-
+      No CRAN release; the GitHub repository was last pushed 2024-06-21 and carries no tagged
+      release, so version is null. Performs Stand Visualization System renders from R; does not
+      call any Rayonier API.

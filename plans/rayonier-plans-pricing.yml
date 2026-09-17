@@ -4,41 +4,49 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Rayonier
 providerId: rayonier
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
-reconciled: false
+method: searched
+modified: '2026-09-17'
+reconciled: true
 tags:
-  - Timber
-  - Real Estate
-  - Forest Products
-description: Rayonier is a publicly traded timber/REIT operator. The corporate site does not
-  expose a public developer API or commercial API price list; integrations with timber buyers,
-  land brokers, and supply-chain partners are handled through direct business relationships.
+- Timber
+- Real Estate
+- Forest Products
+description: Rayonier publishes no API pricing and no developer plans (searched rayonier.com, the GIS
+  host and the hunting and beekeeping sites 2026-09-17). The one public API surface — the ArcGIS REST
+  services on gis.rayonier.com — is anonymous and unpriced. Commercial relationships (hunting agreements
+  on rayonierhunting.com, apiary leases on rayonierbeekeeping.com, land sales via Raydient) are contracts
+  for land use, not API tiers, and no price list for them is published.
 sources:
-  - https://www.rayonier.com/
-notes: No public developer API or pricing page exists for Rayonier. Treat any integration as
-  contact-sales / B2B-only.
+- https://www.rayonier.com/
+- https://www.rayonier.com/legal
+- https://gis.rayonier.com/arcgis/rest/services
+- https://www.rayonierhunting.com/
+- https://www.rayonierbeekeeping.com/how-it-works/
+notes: 'plan_count is 0 because no API plan exists, not because the API is gated: the Public and Hosted
+  ArcGIS folders answer without a credential and carry no published usage terms beyond the site Terms
+  of Use at https://www.rayonier.com/legal. The single "Contact Sales" plan below is retained as the honest
+  description of how any deeper data exchange is arranged.'
 plans:
-  - id: rayonier-contact-sales
-    name: Contact Sales
-    type: enterprise
-    description: Any data exchange with Rayonier (timber availability, harvest schedules, real
-      estate inventory) is arranged via direct business contact rather than a published API plan.
-    entries:
-      - label: Custom contract
-        name: custom
-        type: subscription
-        metric: contract
-        limit: -1
-        timeFrame: year
-        geo: US
-        unit: 1
-        price: contact sales
-        userMultiplied: false
-    elements:
-      - name: Direct customer or supplier relationship
+- id: rayonier-contact-sales
+  name: Contact Sales
+  type: enterprise
+  description: Any data exchange with Rayonier (timber availability, harvest schedules, real estate inventory)
+    is arranged via direct business contact rather than a published API plan.
+  entries:
+  - label: Custom contract
+    name: custom
+    type: subscription
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: US
+    unit: 1
+    price: contact sales
+    userMultiplied: false
+  elements:
+  - name: Direct customer or supplier relationship
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+generated: '2026-09-17'
+plan_count: 0

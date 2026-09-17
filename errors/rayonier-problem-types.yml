@@ -1,0 +1,57 @@
+generated: '2026-09-17'
+method: probed
+format: arcgis-rest-error
+source: >-
+  Error bodies observed on live anonymous calls to https://gis.rayonier.com/arcgis/rest/services
+  and https://gis.rayonier.com/portal/sharing/rest on 2026-09-17. Rayonier publishes no error
+  reference; every entry below was observed, none is taken from Esri's generic documentation.
+note: |
+  The ArcGIS REST error envelope is {"error":{"code":<int>,"message":<string>,"details":[...]}}
+  and it is delivered INSIDE an HTTP 200 response for the REST surface — the HTTP status is
+  200 for "Service not found", "Token Required" and "Unable to complete operation" alike. An
+  agent must parse the body. Only non-REST paths (SOAP query-string errors, unknown portal
+  routes, /.well-known/*) return a real 4xx with an HTML page. Not RFC 9457.
+envelope:
+  path: error
+  fields: [code, message, details]
+  http_status_carries_error: false
+problem_types:
+  - code: 400
+    http_status: 200
+    title: Unable to complete operation.
+    detail_observed: ["Unable to perform query operation."]
+    observed_on: Public/Rayonier_FEE_Ownership_Public/FeatureServer/0/query?where=BOGUS%3D1&f=json
+    remediation: the `where` clause referenced a field the layer does not have; read the layer document's fields[] first.
+  - code: 404
+    http_status: 200
+    title: Service not found
+    observed_on: Hosted/INV_STAND_DESC_SOUTH/MapServer?f=json
+    remediation: Hosted/ services expose FeatureServer only; use the type listed in the folder document.
+  - code: 499
+    http_status: 200
+    title: Token Required
+    observed_on: /arcgis/rest/services/Utilities?f=json
+    remediation: the Utilities folder is staff-only; there is no self-signup path to a token (authentication/).
+  - code: 500
+    http_status: 200
+    title: "Error handling service request :Server object extension 'featureserver' not found."
+    observed_on: Public/RaydientWebSite_TractPolygon/FeatureServer?f=json
+    remediation: this service is MapServer-only; query its MapServer layer instead.
+  - code: 400
+    http_status: 400
+    title: client_id not specified
+    format: html
+    observed_on: /portal/sharing/rest/oauth2/authorize
+    remediation: the portal OAuth authorize endpoint requires client_id; only registered portal apps have one.
+  - code: 400
+    http_status: 400
+    title: "http.400: ArcGIS Server Error"
+    format: html
+    observed_on: /arcgis/services/Public/Rayonier_FEE_Ownership_Public/MapServer/WMSServer?service=WMS&request=GetCapabilities
+    remediation: the OGC WMS/WFS extensions are not enabled on any service; use the REST /query endpoint.
+  - code: 404
+    http_status: 404
+    title: Page Not Found
+    format: html
+    observed_on: /.well-known/*, /robots.txt, /arcgis/robots.txt
+    remediation: none — the host serves no well-known documents.

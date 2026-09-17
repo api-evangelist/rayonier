@@ -1,0 +1,118 @@
+generated: '2026-09-17'
+method: derived
+source: >-
+  Layer documents fetched 2026-09-17 from https://gis.rayonier.com/arcgis/rest/services and
+  saved as arcgis/rayonier-arcgis-layer-schemas.json (30 layers across 10 services). Only field
+  NAMES and types were read; no feature rows are stored here.
+note: |
+  Rayonier publishes no object reference, so this graph is read from the served layer schemas.
+  ArcGIS layers declare no relationships[] on this server (0 on every layer checked), so every
+  edge below is inferred from shared key fields — HuntingOID / HuntingID tie the hunting lease
+  unit (RLU) to its permit areas, food plots, timber sales and forest age-class polygons;
+  RESOURCEUNITOID / OwnershipOID tie bee-lease polygons and PLSS sections to the resource unit
+  and ownership record. Confidence is medium: the keys are named consistently across layers
+  but no referential constraint is published.
+entities:
+  - name: FeeOwnership
+    layer: Public/Rayonier_FEE_Ownership_Public/FeatureServer/0
+    geometry: polygon
+    description: Rayonier fee-owned land, symbolised by entity (REIT, TRS, Other); 6,216 polygons on 2026-09-17.
+    fields: [OBJECTID, ENTITYID, GISACRES]
+  - name: HuntingRLU
+    layer: Public/Hunting_RLU_Permits_Salesforce/MapServer/0
+    geometry: polygon
+    description: Recreational lease unit offered for hunting; the unit rayonierhunting.com sells.
+    fields: [HuntingOID, HuntingID, Type, Status, StateName_Max, CountyName_Max, GISAcres, NetAcres, CustServRegion_Max, ShutDownZone_Max, ResourceUnitName, AsOfDate]
+    id_field: HuntingOID
+  - name: PermitArea
+    layer: Public/Hunting_RLU_Permits_Salesforce/MapServer/3
+    geometry: polygon
+    fields: [HuntingOID, HuntingID, Type, Status, GISAcres, NetAcres, AsOfDate]
+  - name: AccessPoint
+    layer: Public/Hunting_RLU_Permits_Salesforce/MapServer/2
+    geometry: point
+    fields: [AREA_NAME, AREA_TYPE, FEATURE_TYPE, FEATURE_NAME, FEATURE_DESC]
+  - name: AccessRoute
+    layer: Public/Hunting_RLU_Permits_Salesforce/MapServer/4
+    geometry: polyline
+    fields: [AREA_NAME, AREA_TYPE, FEATURE_TYPE, FEATURE_NAME]
+  - name: FoodPlot
+    layer: Public/Hunting_RLU_Permits_Salesforce/MapServer/6
+    geometry: point
+    fields: [HUNTINGPOIID, HUNTINGOID, HUNTINGID, POITYPE, STATUS, ISRENTAL, HUNTINGPOIACRES, ASOFDATE]
+  - name: Road
+    layer: Public/Hunting_RLU_Permits_Salesforce/MapServer/7
+    geometry: polyline
+    fields: [ROADNAME, ALTERNATEROADNAME, ROADCLASS]
+  - name: TimberSale
+    layer: Public/Hunting_TimberSales_SalesForce/MapServer/0
+    geometry: polygon
+    description: Active harvest (layer 0) and harvests completed within 30 days (layer 1) overlaying a hunting unit.
+    fields: [TSOID, HuntingOID, HuntingID, TS, CutType, TSStatus, OverlayAcres, LastDateOfProcess]
+    id_field: TSOID
+  - name: ForestAgeClass
+    layer: Public/Hunting_RLU_StandAgeClass_Salesforce/MapServer/2
+    geometry: polygon
+    fields: [HuntingOID, HuntingID, StandCategory, GrossAcres, Source, SourceDate]
+  - name: BeeLeasePolygon
+    layer: Public/BeeLease_WebSite/MapServer/1
+    geometry: polygon
+    description: Apiary lease sites; layer 1 = Available, layer 0 = Currently Unavailable. Rebuilt nightly; consumed by rayonierbeekeeping.com.
+    fields: [STATE, COUNTY, FIPS, ANEOID, OwnershipOID, RESOURCEUNITOID, ACTIVITYPOLYGONID, CalcGISAcres, StatusFlag, AsOfDate, CMPTWPDESC]
+  - name: RealEstateTract
+    layer: Public/RaydientWebSite_TractPolygon/MapServer/0
+    geometry: polygon
+    description: Land-sale tract published to the Raydient Rural website.
+    fields: [TractID, TractName, ParcelCount, GISAcres, TractStatus]
+    id_field: TractID
+  - name: FirePerimeter
+    layer: Public/FirePerimeters/FeatureServer/0
+    geometry: polygon
+    description: NIFC fire perimeters with Rayonier overlap acres and a RYN flag (external data joined to Rayonier ownership).
+    fields: [NIFC_OID, IncidentName, FeatureCategory, IncidentGISAcres, FeatureStatus, DateCurrent, ComplexName]
+  - name: StandDescription
+    layer: Hosted/INV_STAND_DESC_SOUTH/FeatureServer/0
+    geometry: polygon
+    description: Forest inventory stand record (US South) — land type, origin, current age, last harvest date, species.
+    fields: [contextoid, ru, cmptwpdesc, standname, county, entityid, landtype, landsubtype, plantability, standorigin, currentage, lastharvdate, sfwdspecies1]
+  - name: PLSSSection
+    layer: Public/PA_TwnRngSec/FeatureServer/0
+    geometry: polygon
+    fields: [RESOURCEUNITOID]
+relationships:
+  - from: HuntingRLU
+    to: PermitArea
+    type: has_many
+    via: HuntingOID
+    confidence: medium
+  - from: HuntingRLU
+    to: FoodPlot
+    type: has_many
+    via: HUNTINGOID
+    confidence: medium
+  - from: HuntingRLU
+    to: TimberSale
+    type: has_many
+    via: HuntingOID
+    confidence: medium
+  - from: HuntingRLU
+    to: ForestAgeClass
+    type: has_many
+    via: HuntingOID
+    confidence: medium
+  - from: FeeOwnership
+    to: StandDescription
+    type: has_many
+    via: entityid -> ENTITYID
+    confidence: low
+  - from: BeeLeasePolygon
+    to: PLSSSection
+    type: belongs_to
+    via: RESOURCEUNITOID
+    confidence: low
+  - from: FirePerimeter
+    to: FeeOwnership
+    type: overlays
+    via: spatial join (RYN overlapping acres computed by FME)
+    confidence: medium
+id_prefixes: []

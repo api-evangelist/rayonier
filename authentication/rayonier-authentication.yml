@@ -1,0 +1,74 @@
+generated: '2026-09-17'
+method: probed
+source: >-
+  https://gis.rayonier.com/arcgis/rest/info?f=json (saved as arcgis/rayonier-arcgis-rest-info.json),
+  https://gis.rayonier.com/portal/sharing/rest/portals/self?f=json (saved as
+  arcgis/rayonier-arcgis-portal-self.json), and anonymous calls against the Public and Hosted
+  service folders, 2026-09-17.
+docs: null
+note: |
+  Rayonier publishes no authentication page and no developer documentation of any kind. What is
+  recorded here was read out of the server's own discovery documents and confirmed by calling
+  the surface anonymously. The headline for an agent: every service in the Public and Hosted
+  folders (45 services, 102 layers) answers metadata and /query calls with NO credential. The
+  Utilities folder is the one place a token is demanded — it returned the ArcGIS error envelope
+  {"error":{"code":499,"message":"Token Required"}}.
+
+  The server itself runs token-based security (authInfo.isTokenBasedSecurity = true, tokens
+  minted at the portal's generateToken endpoint) and the portal supports OAuth 2.0 and SAML
+  (supportsOAuth = true, samlEnabled = true, disableSignup = true). Those are the credentials
+  Rayonier staff use to reach non-public items; the sign-in page redirects to
+  /portal/sharing/oauth2/authorize with client_id=arcgisonline. Self-signup is disabled, so
+  there is no path for an outside developer to obtain a token — the public surface is the
+  whole public surface.
+
+  No write was attempted. Nine services ADVERTISE Create/Update/Delete in their capabilities
+  string (see conventions/); whether an anonymous caller can exercise them was deliberately not
+  tested.
+summary:
+  types: [none, apiKey, oauth2]
+  anonymous_read_surface: true
+  api_key_in: [query]
+  oauth2_flows: [authorizationCode]
+  self_signup: false
+schemes:
+  - name: anonymous
+    type: none
+    surface: ArcGIS Server REST — Public and Hosted folders (gis.rayonier.com/arcgis/rest/services)
+    sources: [arcgis/rayonier-arcgis-service-inventory.json]
+    evidence: >-
+      All 45 services in Public/ and Hosted/ returned their service document (HTTP 200) with no
+      credential on 2026-09-17, and
+      Public/Rayonier_FEE_Ownership_Public/FeatureServer/0/query?where=1%3D1&returnCountOnly=true
+      returned {"count":6216} anonymously.
+  - name: anonymous
+    type: none
+    surface: ArcGIS Server SOAP (gis.rayonier.com/arcgis/services)
+    sources: [wsdl/rayonier-fee-ownership-mapserver.wsdl]
+    evidence: >-
+      ?wsdl returned the 290 KB MapServer contract (HTTP 200, text/xml) with no credential on
+      three Public/ services.
+  - name: arcgis-token
+    type: apiKey
+    in: query
+    param: token
+    surface: ArcGIS Server REST — Utilities folder and any non-public item
+    tokenUrl: https://gis.rayonier.com/portal/sharing/rest/generateToken
+    evidence: >-
+      /arcgis/rest/info reports authInfo.isTokenBasedSecurity true and names the token service;
+      /arcgis/rest/services/Utilities?f=json answered {"error":{"code":499,"message":"Token
+      Required"}}. Tokens are issued only to portal accounts; signup is disabled.
+  - name: portal-oauth2
+    type: oauth2
+    surface: Portal for ArcGIS (gis.rayonier.com/portal)
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://gis.rayonier.com/portal/sharing/rest/oauth2/authorize
+        tokenUrl: https://gis.rayonier.com/portal/sharing/rest/oauth2/token
+        scopes: {}
+    evidence: >-
+      portals/self reports supportsOAuth true and samlEnabled true; /portal/sharing/login 302s
+      to /portal/sharing/oauth2/authorize?client_id=arcgisonline&response_type=code. No
+      RFC 8414 /.well-known/oauth-authorization-server document is served (404), and no scope
+      list is published, so scopes: is empty rather than guessed. Staff-only: disableSignup is
+      true.

@@ -1,0 +1,67 @@
+generated: '2026-09-17'
+method: probed
+source: >-
+  Live probes 2026-09-17 of https://gis.rayonier.com/arcgis/rest/info, the service and layer
+  documents saved under arcgis/, the WSDL saved under wsdl/, and WMS/WFS GetCapabilities
+  requests against the Public/ services.
+note: |
+  Every entry below was read out of a document Rayonier's server actually serves. Rayonier
+  publishes no compliance page, no trust centre and no certification statement (searched
+  rayonier.com 2026-09-17), so NO Compliance pointer is wired. The domain standard for this
+  market is the OGC family; the finding is that Rayonier runs the Esri GeoServices REST
+  dialect and has NOT enabled the OGC extensions on it, which is recorded as a false rather
+  than omitted so a buyer who speaks WMS/WFS knows a bespoke ArcGIS client is required.
+standards:
+  - id: esri-geoservices-rest
+    conforms: true
+    evidence: >-
+      https://gis.rayonier.com/arcgis/rest/info?f=json reports currentVersion 11.5 and every
+      service document carries the GeoServices REST shape (capabilities, layers[], fields[],
+      supportedQueryFormats, maxRecordCount); /query answered anonymously with an esriJSON
+      FeatureSet.
+  - id: geojson-rfc7946
+    conforms: true
+    evidence: >-
+      FeatureServer layers advertise supportedQueryFormats "JSON, geoJSON, PBF"
+      (arcgis/rayonier-fee-ownership-layer0.json), so f=geojson returns RFC 7946 output.
+  - id: wsdl-1.1-soap-1.1
+    conforms: true
+    evidence: >-
+      https://gis.rayonier.com/arcgis/services/Public/Rayonier_FEE_Ownership_Public/MapServer?wsdl
+      returned a WSDL 1.1 definitions document (55 portType operations, soap:address on
+      gis.rayonier.com), saved verbatim as wsdl/rayonier-fee-ownership-mapserver.wsdl.
+  - id: ogc-wms-1.3.0
+    conforms: false
+    evidence: >-
+      No service lists WMSServer in supportedExtensions (Public/ services list "FeatureServer"
+      or nothing), and GetCapabilities on
+      /arcgis/services/Public/Rayonier_FEE_Ownership_Public/MapServer/WMSServer returned HTTP
+      400 "ArcGIS Server Error" on 2026-09-17.
+  - id: ogc-wfs-2.0
+    conforms: false
+    evidence: >-
+      GetCapabilities on .../MapServer/WFSServer returned HTTP 400; no service advertises the
+      WFSServer extension.
+  - id: ogc-api-features-1.0
+    conforms: false
+    evidence: >-
+      No OGC API landing page or /conformance document exists on gis.rayonier.com; ArcGIS
+      Enterprise 11.5 exposes it only when the OGC Features extension is enabled, and none of
+      the 45 services advertises it.
+  - id: oauth2
+    conforms: true
+    scope: portal (staff-only)
+    evidence: >-
+      portals/self reports supportsOAuth true; /portal/sharing/login 302s to
+      /portal/sharing/rest/oauth2/authorize. Signup is disabled, so it is not an integrator
+      surface; no RFC 8414 discovery document is served (404).
+  - id: saml
+    conforms: true
+    scope: portal (staff-only)
+    evidence: portals/self reports samlEnabled true.
+  - id: rfc9116-security-txt
+    conforms: false
+    evidence: /.well-known/security.txt is 404 on www.rayonier.com and gis.rayonier.com.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: errors arrive as the ArcGIS {"error":{code,message,details}} envelope inside HTTP 200 (errors/).

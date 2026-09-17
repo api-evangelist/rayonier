@@ -4,33 +4,34 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Rayonier
 providerId: rayonier
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
-reconciled: false
+method: probed
+modified: '2026-09-17'
+reconciled: true
 tags:
-  - Timber
-  - Real Estate
-  - Forest Products
-  - Rate Limiting
-description: Rayonier does not publish a developer API and therefore publishes no rate-limit
-  documentation. Any data interchange occurs through direct B2B integrations with negotiated
-  service terms.
+- Timber
+- Real Estate
+- Forest Products
+- Rate Limiting
+description: Rayonier publishes no rate-limit documentation for its ArcGIS REST surface on gis.rayonier.com,
+  and no rate-limit header (X-RateLimit-*, RateLimit-*, Retry-After) was observed on any of the ~120 anonymous
+  responses collected on 2026-09-17. The only published ceiling is the per-layer maxRecordCount transfer
+  limit, which caps a single page (5000 on the fee-ownership layer, 2000 on most others, 1000 on some
+  Hosted layers) and is a page size, not a rate limit.
 sources:
-  - https://www.rayonier.com/
-notes: No public developer API or rate-limit documentation exists; limits would be set per
-  contract if any integration is established.
+- https://gis.rayonier.com/arcgis/rest/services/Public/Rayonier_FEE_Ownership_Public/FeatureServer/0?f=json
+- https://gis.rayonier.com/arcgis/rest/services/Public/Rayonier_FEE_Ownership_Public/FeatureServer/0/query?where=1%3D1&returnCountOnly=true&f=json
+notes: 'limit_count is 0: an honest zero, recorded from live probes. Read maxRecordCount from each layer
+  document and page with resultOffset/resultRecordCount; exceededTransferLimit:true in a response means
+  the page was truncated.'
 responseCodes: {}
-limits:
-  - name: Contract-defined
-    scope: contract
-    metric: varies
-    limit: 'negotiated per integration; no public limits published'
+limits: []
 policies:
-  - name: Bilateral Agreement
-    description: Service-level expectations, retry, and throttling behavior are documented in
-      individual partner agreements rather than a public rate-limit page.
+- name: Per-layer transfer limit (not a rate limit)
+  description: 'maxRecordCount caps rows per query page: 5000 on Public/Rayonier_FEE_Ownership_Public/FeatureServer/0,
+    2000 on most layers, 1000 on some Hosted services. Observed in the layer documents saved under arcgis/.'
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+generated: '2026-09-17'
+limit_count: 0
+headers: []

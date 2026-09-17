@@ -1,0 +1,1248 @@
+{
+  "probed": "2026-09-17",
+  "root": "https://gis.rayonier.com/arcgis/rest/services",
+  "folders": {
+    "Public": {
+      "status": 200,
+      "service_count": 29
+    },
+    "Hosted": {
+      "status": 200,
+      "service_count": 16
+    }
+  },
+  "services": [
+    {
+      "name": "Public/BeeLease_WebSite",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/BeeLease_WebSite/FeatureServer",
+      "status": 200,
+      "description": "Bee lease polygons for Bee Website. A FME script builds NTI_BeeLease_Website every night.",
+      "capabilities": "Query",
+      "supportedExtensions": null,
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Currently Unavailable",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 1,
+          "name": "Available",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/BeeLease_WebSite",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/BeeLease_WebSite/MapServer",
+      "status": 200,
+      "description": "Bee lease polygons for Bee Website. A FME script builds NTI_BeeLease_Website every night.",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "FeatureServer",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Currently Unavailable",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 1,
+          "name": "Available",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/FirePerimeters",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/FirePerimeters/FeatureServer",
+      "status": 200,
+      "description": "National Interagency Fire Center fire perimeters with RYN overlapping acres and RYNFlag. This is built using FME to intersect RYN resource units with the NIFC data and is updated using FMEServer on a periodic basis.",
+      "capabilities": "Query",
+      "supportedExtensions": null,
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "NIFC Fire Perimeters",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/FirePerimeters",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/FirePerimeters/MapServer",
+      "status": 200,
+      "description": "National Interagency Fire Center fire perimeters with RYN overlapping acres and RYNFlag. This is built using FME to intersect RYN resource units with the NIFC data and is updated using FMEServer on a periodic basis.",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "FeatureServer",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "NIFC Fire Perimeters",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/GenericFeatures",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/GenericFeatures/FeatureServer",
+      "status": 200,
+      "description": "Generic Features for RU contractors to collect data with",
+      "capabilities": "Query,Create,Update,Delete,Uploads,Editing,Sync,ChangeTracking",
+      "supportedExtensions": null,
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Generic Point",
+          "geometryType": "esriGeometryPoint"
+        },
+        {
+          "id": 1,
+          "name": "Generic Line",
+          "geometryType": "esriGeometryPolyline"
+        },
+        {
+          "id": 2,
+          "name": "Generic Polygon",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/GenericFeatures",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/GenericFeatures/MapServer",
+      "status": 200,
+      "description": "Generic Features for RU contractors to collect data with",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "FeatureServer",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Generic Point",
+          "geometryType": "esriGeometryPoint"
+        },
+        {
+          "id": 1,
+          "name": "Generic Line",
+          "geometryType": "esriGeometryPolyline"
+        },
+        {
+          "id": 2,
+          "name": "Generic Polygon",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/Hunting_RLU_FireZone_Salesforce",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/Hunting_RLU_FireZone_Salesforce/MapServer",
+      "status": 200,
+      "description": "Hunting RLU and Permits and Permit aux layers for use in Salesforce",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "FireZone ShutDown Status",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/Hunting_RLU_LeasePercentBreakout",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/Hunting_RLU_LeasePercentBreakout/MapServer",
+      "status": 200,
+      "description": "",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": null,
+      "layers": [
+        {
+          "id": 0,
+          "name": "DoNotUse",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": [
+        "Hunting_RLU_LeasePercentBreakout"
+      ]
+    },
+    {
+      "name": "Public/Hunting_RLU_OnX",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/Hunting_RLU_OnX/MapServer",
+      "status": 200,
+      "description": "Hunting RLU",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "HuntingRLU",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 1,
+          "name": "HuntingPermits",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/Hunting_RLU_Permits_Salesforce",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/Hunting_RLU_Permits_Salesforce/FeatureServer",
+      "status": 200,
+      "description": "Hunting RLU and Permits and Permit aux layers for use in Salesforce",
+      "capabilities": "Query",
+      "supportedExtensions": null,
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Hunting RLU",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 1,
+          "name": "Hunting RLU-Green",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 2,
+          "name": "Access Point",
+          "geometryType": "esriGeometryPoint"
+        },
+        {
+          "id": 3,
+          "name": "Permit Area",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 4,
+          "name": "Access Route",
+          "geometryType": "esriGeometryPolyline"
+        },
+        {
+          "id": 5,
+          "name": "Walk-in Area",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 6,
+          "name": "Rayonier Food Plots",
+          "geometryType": "esriGeometryPoint"
+        },
+        {
+          "id": 7,
+          "name": "Roads",
+          "geometryType": "esriGeometryPolyline"
+        },
+        {
+          "id": 8,
+          "name": "Hunting RLU - MidZoom",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 9,
+          "name": "Hunting RLU-Green - MidZoom",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 10,
+          "name": "State",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 11,
+          "name": "County",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 12,
+          "name": "Permit Area-Purple",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/Hunting_RLU_Permits_Salesforce",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/Hunting_RLU_Permits_Salesforce/MapServer",
+      "status": 200,
+      "description": "Hunting RLU and Permits and Permit aux layers for use in Salesforce",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "FeatureServer",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Hunting RLU",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 1,
+          "name": "Hunting RLU-Green",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 2,
+          "name": "Access Point",
+          "geometryType": "esriGeometryPoint"
+        },
+        {
+          "id": 3,
+          "name": "Permit Area",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 4,
+          "name": "Access Route",
+          "geometryType": "esriGeometryPolyline"
+        },
+        {
+          "id": 5,
+          "name": "Walk-in Area",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 6,
+          "name": "Rayonier Food Plots",
+          "geometryType": "esriGeometryPoint"
+        },
+        {
+          "id": 7,
+          "name": "Roads",
+          "geometryType": "esriGeometryPolyline"
+        },
+        {
+          "id": 8,
+          "name": "Hunting RLU - MidZoom",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 9,
+          "name": "Hunting RLU-Green - MidZoom",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 10,
+          "name": "State",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 11,
+          "name": "County",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 12,
+          "name": "Permit Area-Purple",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/Hunting_RLU_StandAgeClass_Salesforce",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/Hunting_RLU_StandAgeClass_Salesforce/MapServer",
+      "status": 200,
+      "description": "Hunting Stand Age Class for Salesforce",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Roads",
+          "geometryType": "esriGeometryPolyline"
+        },
+        {
+          "id": 1,
+          "name": "Active Timbersales",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 2,
+          "name": "Forest Age-Class",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 3,
+          "name": "Forest Age-Class",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 4,
+          "name": "Forest Age-Class",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 5,
+          "name": "Other",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/Hunting_Silviculture_SalesForce",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/Hunting_Silviculture_SalesForce/MapServer",
+      "status": 200,
+      "description": "Silviculture activities for Salesforce Silv notification",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Silviculture Activity",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 1,
+          "name": "RLU",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/Hunting_TimberSales_SalesForce",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/Hunting_TimberSales_SalesForce/MapServer",
+      "status": 200,
+      "description": "Hunting_TimberSales_v3",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Active Harvests",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 1,
+          "name": "Completed Harvests < 30 days",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 2,
+          "name": "RLU",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/INF_FireZones_Redfin",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/INF_FireZones_Redfin/MapServer",
+      "status": 200,
+      "description": "Hunting RLU and Permits and Permit aux layers for use in Salesforce",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "RayonierFireZones",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/IRWINFirePerimeters",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/IRWINFirePerimeters/FeatureServer",
+      "status": 200,
+      "description": "IRWIN Fire Perimeters and Centroids on/near Rayonier property. This is built using FME to intersect RYN resource units to the IRWIN data and is updated using FMEServer on a periodic basis",
+      "capabilities": "Query",
+      "supportedExtensions": null,
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "IRWIN Wildfire Centroids - Within5MilesOfRYN",
+          "geometryType": "esriGeometryPoint"
+        },
+        {
+          "id": 1,
+          "name": "IRWIN Wildfire Polygons - Within5MilesOfRYN",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/IRWINFirePerimeters",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/IRWINFirePerimeters/MapServer",
+      "status": 200,
+      "description": "IRWIN Fire Perimeters and Centroids on/near Rayonier property. This is built using FME to intersect RYN resource units to the IRWIN data and is updated using FMEServer on a periodic basis",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "FeatureServer",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "IRWIN Wildfire Centroids - Within5MilesOfRYN",
+          "geometryType": "esriGeometryPoint"
+        },
+        {
+          "id": 1,
+          "name": "IRWIN Wildfire Polygons - Within5MilesOfRYN",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/Lightning_LongTerm",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/Lightning_LongTerm/MapServer",
+      "status": 200,
+      "description": "DTN Lightning Test",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Lightning-Positive Strike",
+          "geometryType": "esriGeometryPoint"
+        },
+        {
+          "id": 1,
+          "name": "Lightning-Negative Strike",
+          "geometryType": "esriGeometryPoint"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/Lightning",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/Lightning/MapServer",
+      "status": 200,
+      "description": "DTN Lightning Test",
+      "capabilities": "Query,Map,Data",
+      "supportedExtensions": "",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Lightning-Positive Strike",
+          "geometryType": "esriGeometryPoint"
+        },
+        {
+          "id": 1,
+          "name": "Lightning-Negative Strike",
+          "geometryType": "esriGeometryPoint"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/ModisHotSpots",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/ModisHotSpots/MapServer",
+      "status": 200,
+      "description": "DTN Lightning Test",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Modis/VIIRS Hotspots",
+          "geometryType": "esriGeometryPoint"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/PA_TwnRngSec",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/PA_TwnRngSec/FeatureServer",
+      "status": 200,
+      "description": "Township, Range and Section from LMS for PRU",
+      "capabilities": "Query,Create,Update,Delete,Uploads,Editing",
+      "supportedExtensions": null,
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Section",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 1,
+          "name": "Township Range",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/PA_TwnRngSec",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/PA_TwnRngSec/MapServer",
+      "status": 200,
+      "description": "Township, Range and Section from LMS for PRU",
+      "capabilities": "Query,Map,Data",
+      "supportedExtensions": "FeatureServer",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Section",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 1,
+          "name": "Township Range",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/Rainfall_Accumulations_Compartment_Section",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/Rainfall_Accumulations_Compartment_Section/FeatureServer",
+      "status": 200,
+      "description": "DTN rainfall accumulation data - 1 and 7 days - weighted average by southern compartments",
+      "capabilities": "Query,Create,Update,Delete,Uploads,Editing",
+      "supportedExtensions": null,
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Rainfall_Accumulation_7Day",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 1,
+          "name": "Rainfall_Accumlation_1Day",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/Rainfall_Accumulations_Compartment_Section",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/Rainfall_Accumulations_Compartment_Section/MapServer",
+      "status": 200,
+      "description": "DTN rainfall accumulation data - 1 and 7 days - weighted average by southern compartments",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "FeatureServer",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Rainfall_Accumulation_7Day",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 1,
+          "name": "Rainfall_Accumlation_1Day",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/RaydientWebSite_Centroid",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/RaydientWebSite_Centroid/MapServer",
+      "status": 200,
+      "description": "Subset of LMS pacel centroids for RaydientPlaces website",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "TSI_Website_Centroid",
+          "geometryType": "esriGeometryPoint"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/RaydientWebSite_Polygon",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/RaydientWebSite_Polygon/MapServer",
+      "status": 200,
+      "description": "Subset of LMS pacels for Raydient website",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "TSI_Website_Polygon",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/RaydientWebSite_TractPolygon",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/RaydientWebSite_TractPolygon/MapServer",
+      "status": 200,
+      "description": "",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "",
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": null,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Tract_Polygon",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/Rayonier_FEE_Ownership_Public",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/Rayonier_FEE_Ownership_Public/FeatureServer",
+      "status": 200,
+      "description": "Shows the LMS Live Ownership/Entity layers. Properties are symbolized by REIT, TRS and Other (such as timber reserves, timber deeds, etc). The LSSEntity attribute is what separates the layers into categories. Also included are SOLD properties from the Land Records SOLD layer.",
+      "capabilities": "Query",
+      "supportedExtensions": null,
+      "maxRecordCount": 5000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Rayonier Fee Ownership",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Public/Rayonier_FEE_Ownership_Public",
+      "type": "MapServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Public/Rayonier_FEE_Ownership_Public/MapServer",
+      "status": 200,
+      "description": "Shows the LMS Live Ownership/Entity layers. Properties are symbolized by REIT, TRS and Other (such as timber reserves, timber deeds, etc). The LSSEntity attribute is what separates the layers into categories. Also included are SOLD properties from the Land Records SOLD layer.",
+      "capabilities": "Map,Query,Data",
+      "supportedExtensions": "FeatureServer",
+      "maxRecordCount": 5000,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "Rayonier Fee Ownership",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Hosted/BKG_FirePerimeter_GFC",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Hosted/BKG_FirePerimeter_GFC/FeatureServer",
+      "status": 200,
+      "description": "",
+      "capabilities": "Query,Sync",
+      "supportedExtensions": null,
+      "maxRecordCount": 1000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": null,
+      "layers": [
+        {
+          "id": 0,
+          "name": "BKG_FirePerimeter_GFC",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Hosted/BKG_PCH_RYN_OFFICELOCATION",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Hosted/BKG_PCH_RYN_OFFICELOCATION/FeatureServer",
+      "status": 200,
+      "description": "",
+      "capabilities": "Query,Sync",
+      "supportedExtensions": null,
+      "maxRecordCount": 1000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": null,
+      "layers": [
+        {
+          "id": 0,
+          "name": "BKG_PCH_RYN_OFFICELOCATION",
+          "geometryType": "esriGeometryPoint"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Hosted/INF_OWNERSHIP",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Hosted/INF_OWNERSHIP/FeatureServer",
+      "status": 200,
+      "description": "",
+      "capabilities": "Query,Sync",
+      "supportedExtensions": null,
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "INV_OWNERSHIP",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Hosted/INV_Age00_Collection",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Hosted/INV_Age00_Collection/FeatureServer",
+      "status": 200,
+      "description": "",
+      "capabilities": "Query,Create,Update,Delete,Editing,Sync,Extract,Uploads",
+      "supportedExtensions": null,
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": null,
+      "layers": [
+        {
+          "id": 0,
+          "name": "INV_Age00_Collection",
+          "geometryType": "esriGeometryPoint"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Hosted/INV_Age00_Points",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Hosted/INV_Age00_Points/FeatureServer",
+      "status": 200,
+      "description": "",
+      "capabilities": "Query,Create,Update,Delete,Editing,Sync,Uploads",
+      "supportedExtensions": null,
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": null,
+      "layers": [
+        {
+          "id": 0,
+          "name": "INV_Age00_Points",
+          "geometryType": "esriGeometryPoint"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Hosted/INV_Age00_Polygons",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Hosted/INV_Age00_Polygons/FeatureServer",
+      "status": 200,
+      "description": "",
+      "capabilities": "Query,Create,Update,Delete,Editing,Sync,Uploads",
+      "supportedExtensions": null,
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": null,
+      "layers": [
+        {
+          "id": 0,
+          "name": "INV_Age00_Polygons",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Hosted/INV_Age01_Collection",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Hosted/INV_Age01_Collection/FeatureServer",
+      "status": 200,
+      "description": "",
+      "capabilities": "Query,Create,Update,Delete,Editing,Sync,Extract,Uploads",
+      "supportedExtensions": null,
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": null,
+      "layers": [
+        {
+          "id": 0,
+          "name": "INV_Age01_Collection",
+          "geometryType": "esriGeometryPoint"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Hosted/INV_Age01_Points",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Hosted/INV_Age01_Points/FeatureServer",
+      "status": 200,
+      "description": "",
+      "capabilities": "Query,Create,Update,Delete,Editing,Sync,Uploads",
+      "supportedExtensions": null,
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": null,
+      "layers": [
+        {
+          "id": 0,
+          "name": "INV_Age01_Points",
+          "geometryType": "esriGeometryPoint"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Hosted/INV_Age01_Polygons",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Hosted/INV_Age01_Polygons/FeatureServer",
+      "status": 200,
+      "description": "",
+      "capabilities": "Query,Create,Update,Delete,Editing,Sync,Uploads",
+      "supportedExtensions": null,
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": null,
+      "layers": [
+        {
+          "id": 0,
+          "name": "INV_Age01_Polygons",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Hosted/INV_CMPTWP",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Hosted/INV_CMPTWP/FeatureServer",
+      "status": 200,
+      "description": "",
+      "capabilities": "Query,Sync",
+      "supportedExtensions": null,
+      "maxRecordCount": 1000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": null,
+      "layers": [
+        {
+          "id": 0,
+          "name": "INV_CMPTWP",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Hosted/INV_DISTRICT",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Hosted/INV_DISTRICT/FeatureServer",
+      "status": 200,
+      "description": "",
+      "capabilities": "Query",
+      "supportedExtensions": null,
+      "maxRecordCount": 1000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": null,
+      "layers": [
+        {
+          "id": 0,
+          "name": "INV_DISTRICT",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Hosted/INV_PCH_RYN_OWNERSHIP",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Hosted/INV_PCH_RYN_OWNERSHIP/FeatureServer",
+      "status": 200,
+      "description": "",
+      "capabilities": "Query,Sync",
+      "supportedExtensions": null,
+      "maxRecordCount": 1000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": null,
+      "layers": [
+        {
+          "id": 0,
+          "name": "INV_PCH_RYN_OWNERSHIP",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Hosted/INV_PCH_RYN_REGIONS",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Hosted/INV_PCH_RYN_REGIONS/FeatureServer",
+      "status": 200,
+      "description": "",
+      "capabilities": "Query",
+      "supportedExtensions": null,
+      "maxRecordCount": 1000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": null,
+      "layers": [
+        {
+          "id": 0,
+          "name": "INV_PCH_RYN_REGIONS",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Hosted/INV_RU_BoundaryChange_GDB",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Hosted/INV_RU_BoundaryChange_GDB/FeatureServer",
+      "status": 200,
+      "description": "",
+      "capabilities": "Query",
+      "supportedExtensions": null,
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "AreasOfChange",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 1,
+          "name": "CMPTWP_Snapshot",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 2,
+          "name": "Forest_Snapshot",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 3,
+          "name": "Region_Snapshot",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 4,
+          "name": "RU_Snapshot",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Hosted/INV_RU_BoundaryChange",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Hosted/INV_RU_BoundaryChange/FeatureServer",
+      "status": 200,
+      "description": "New Resource Unit Boundaries",
+      "capabilities": "Query",
+      "supportedExtensions": null,
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "NewCMPTWP-ByWorkingCircle",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 1,
+          "name": "NewCMPTWP - ByForest",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 2,
+          "name": "OldCMPTWP - ByForest",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 3,
+          "name": "NewForest",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 4,
+          "name": "OldForest",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 5,
+          "name": "NewResourceUnit",
+          "geometryType": "esriGeometryPolygon"
+        },
+        {
+          "id": 6,
+          "name": "OldResourceUnit",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Hosted/INV_STAND_DESC_SOUTH",
+      "type": "FeatureServer",
+      "url": "https://gis.rayonier.com/arcgis/rest/services/Hosted/INV_STAND_DESC_SOUTH/FeatureServer",
+      "status": 200,
+      "description": "",
+      "capabilities": "Query,Sync",
+      "supportedExtensions": null,
+      "maxRecordCount": 2000,
+      "supportedQueryFormats": "JSON",
+      "copyrightText": "",
+      "spatialReference": 3857,
+      "layers": [
+        {
+          "id": 0,
+          "name": "INV_STAND_DESC_SOUTH",
+          "geometryType": "esriGeometryPolygon"
+        }
+      ],
+      "tables": []
+    }
+  ]
+}

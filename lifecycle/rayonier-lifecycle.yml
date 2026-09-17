@@ -1,0 +1,50 @@
+generated: '2026-09-17'
+method: searched
+source: >-
+  https://www.rayonier.com (sitemap, /legal, /about), https://gis.rayonier.com/arcgis/rest/info,
+  https://github.com/Rayonier, and web searches for a Rayonier API status page, changelog or
+  deprecation policy, 2026-09-17.
+note: |
+  Rayonier publishes no API versioning policy, no deprecation policy, no SLA, no changelog
+  and no status page. Searched rayonier.com, the GIS host and the GitHub organization
+  2026-09-17: nothing. This is an absence recorded with the probes that establish it.
+
+  The only change signal on the surface is at the DATA level: the Public/ services carry an
+  AsOfDate field on hunting and bee-lease layers, and service descriptions say several layers
+  are rebuilt nightly by FME ("A FME script builds NTI_BeeLease_Website every night";
+  FirePerimeters "built using FME to integrate NIFC data"). A consumer can detect data
+  refresh; it cannot detect contract change.
+versioning:
+  scheme: none
+  current: null
+  docs: null
+  policy_published: false
+  note: >-
+    No version in any path. /arcgis/rest/info reports currentVersion 11.5 / fullVersion
+    11.5.0, which is the Esri ArcGIS Enterprise product version and moves on upgrade — it is
+    not an API contract version. The portal reports currentVersion 2025.1.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  deprecation_header: false
+  note: >-
+    No RFC 8594 Sunset or Deprecation header was returned on any probed response, no policy
+    page exists, and no contract marks an operation deprecated. DO NOT wire a Deprecation
+    pointer for this provider.
+deprecated_operations: []
+sla:
+  url: null
+  uptime_target: null
+  note: No service-level commitment is published for any Rayonier API surface.
+status_page: null
+status_page_note: >-
+  Rayonier operates no status page. The GIS host is self-managed ArcGIS Enterprise on
+  Rayonier infrastructure (portalDeploymentType ArcGISEnterprise, single tenant), so Esri's
+  https://status.arcgis.com says nothing about it. DO NOT wire a StatusPage pointer.
+changelog: null
+data_refresh_signals:
+  - field: AsOfDate
+    layers: [Hunting RLU, Permit Area, Rayonier Food Plots, Bee lease Available / Currently Unavailable]
+  - schedule: nightly FME rebuild
+    services: [Public/BeeLease_WebSite]
+    evidence: service description text

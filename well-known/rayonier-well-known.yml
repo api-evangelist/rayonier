@@ -1,0 +1,85 @@
+generated: '2026-09-17'
+method: probed
+source: live GET of each /.well-known path on every host this record knows, 2026-09-17
+note: >-
+  Four hosts probed. NOTHING WAS SERVED: no security.txt, no OpenID or OAuth discovery
+  document, no api-catalog, no ai-plugin, no agent card, no llms.txt on any host. Every
+  www.rayonier.com miss is a real 404 (a 36 KB branded not-found page), and gis.rayonier.com
+  answers with an ArcGIS Server "Page Not Found" 404, so neither host echoes paths — a
+  negative-control path that cannot exist returned 404 on both. The two hosts the previous
+  record carried, developer.rayonier.com and api.rayonier.com, DO NOT RESOLVE (NXDOMAIN) and
+  are recorded here so the absence is on file. ir.rayonier.com answers every path with a
+  Cloudflare challenge (HTTP 403 "Just a moment") and could not be probed. NO WellKnown or
+  SecurityTxt pointer is wired: this file documents an absence, not a presence.
+hit_count: 0
+path_echo_control: passed on www.rayonier.com and gis.rayonier.com
+hosts:
+- host: https://www.rayonier.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /robots.txt
+    status: 404
+  - path: /.well-known/ae-negative-control-9c1f2e.json
+    status: 404
+    note: negative control — a path that cannot exist; 404 proves the host does not echo paths
+- host: https://rayonier.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+    note: every path on the apex 301s to https://www.rayonier.com, where it 404s
+- host: https://gis.rayonier.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /robots.txt
+    status: 404
+    note: 302 to /arcgis/robots.txt, which is an ArcGIS Server 404
+  - path: /.well-known/ae-negative-control-9c1f2e.json
+    status: 404
+    note: negative control — passed
+- host: https://ir.rayonier.com
+  documents:
+  - path: /
+    status: 403
+    note: Cloudflare bot challenge ("Just a moment") on every path; the investor site exists but was not probed further
+- host: https://developer.rayonier.com
+  documents:
+  - path: /
+    status: 0
+    note: NXDOMAIN — the host named as humanURL in the prior record does not exist
+- host: https://api.rayonier.com
+  documents:
+  - path: /
+    status: 0
+    note: NXDOMAIN — the host named as baseURL in the prior record does not exist

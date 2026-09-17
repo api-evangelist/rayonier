@@ -1,0 +1,103 @@
+generated: '2026-09-17'
+method: probed
+source: >-
+  Live calls against https://gis.rayonier.com/arcgis/rest/services (service, layer and /query
+  documents saved under arcgis/), the SOAP contract saved as
+  wsdl/rayonier-fee-ownership-mapserver.wsdl, and https://gis.rayonier.com/arcgis/rest/info,
+  2026-09-17.
+note: |
+  Rayonier publishes no API design guide, no developer portal and no conventions page — the
+  surface is a stock ArcGIS Enterprise 11.5 instance, so every convention below is the Esri
+  GeoServices REST convention as this server actually reports it. Where a convention does not
+  exist it is recorded as absent, not guessed.
+authentication:
+  style: none on the Public and Hosted folders; portal token on everything else
+  detail: authentication/rayonier-authentication.yml
+idempotency:
+  supported: false
+  coverage: none
+  scope: []
+  note: >-
+    Nine of the 45 services advertise Create/Update/Delete/Editing in their capabilities
+    string (Public/GenericFeatures, Public/PA_TwnRngSec,
+    Public/Rainfall_Accumulations_Compartment_Section and the six Hosted/INV_Age0* services),
+    which means an applyEdits / addFeatures / updateFeatures / deleteFeatures write surface is
+    ADVERTISED. ArcGIS applyEdits carries no idempotency key: a retried addFeatures inserts a
+    second row. No Idempotency-Key header or equivalent is documented or accepted. `none`
+    rather than `na` because a write surface is advertised; no write was attempted to confirm
+    whether an anonymous caller can actually reach it. DO NOT wire an Idempotency pointer.
+reversibility:
+  grade: none
+  applicable: true
+  write_surface_present: true
+  reversal_operations: []
+  note: >-
+    ArcGIS feature editing has no cancel, undo or restore operation and no stated window; a
+    deleteFeatures call is final unless the layer keeps editor tracking or archiving, and none
+    of the nine write-advertising layers documents either. Public/GenericFeatures/0 carries
+    created_user / last_edited_user tracking fields, which records who edited but does not
+    restore anything. No reversal window is stated anywhere, so none is asserted.
+dry_run_mode:
+  supported: partial
+  coverage: na
+  note: >-
+    No dry-run parameter exists. For the read surface, `returnCountOnly=true` returns the row
+    count a query would produce without returning rows (verified: Fee Ownership layer 0
+    answered {"count":6216}), and `returnIdsOnly=true` returns object IDs only — both useful
+    for sizing a call before paging it. For the advertised write surface there is no rehearsal
+    mode (applyEdits has `rollbackOnFailure`, which is transactional, not a dry run).
+pagination:
+  - surface: FeatureServer / MapServer layer query
+    style: offset
+    params: [resultOffset, resultRecordCount]
+    response_fields: [exceededTransferLimit, features]
+    limits:
+      maxRecordCount: 2000 on most layers; 5000 on Public/Rayonier_FEE_Ownership_Public/FeatureServer/0; 1000 on some Hosted services
+    evidence: >-
+      Read from each layer document's maxRecordCount and
+      advancedQueryCapabilities.supportsPagination (true on the layers checked). maxRecordCount
+      is PER LAYER — read it from the layer document, never assume 2000.
+filtering:
+  - surface: layer query
+    params: [where, objectIds, geometry, geometryType, spatialRel, inSR, outSR, outFields, returnGeometry, returnCountOnly, returnIdsOnly, orderByFields, outStatistics, groupByFieldsForStatistics, resultOffset, resultRecordCount, f]
+    note: >-
+      SQL-92 `where` (1=1 returns everything) plus spatial filters. Layers report
+      supportsStatistics, supportsOrderBy and supportsDistinct in advancedQueryCapabilities.
+content_negotiation:
+  style: query parameter, not Accept header
+  detail: >-
+    `f` selects the representation and HTML is the DEFAULT — `f=json` is required for
+    machine-readable output. Layers advertise supportedQueryFormats "JSON, geoJSON, PBF"
+    (FeatureServer) or "JSON" (MapServer), so `f=geojson` on a FeatureServer layer yields
+    RFC 7946 GeoJSON. Sending an Accept header does not change the default.
+field_selection:
+  supported: true
+  param: outFields
+  note: comma-separated field list or `*`; `returnGeometry=false` drops the geometry.
+versioning:
+  style: none
+  note: >-
+    No API version in the path. currentVersion 11.5 is the Esri product version and moves on
+    upgrade; see lifecycle/.
+error_envelope:
+  shape: '{"error":{"code":<int>,"message":<string>,"details":[]}} returned with HTTP 200'
+  note: >-
+    ArcGIS REST reports most errors INSIDE a 200 response body — "Token Required" (code 499)
+    and "Service not found" both came back as HTTP 200 with an error object. An agent must
+    inspect the body, not the status code. Non-REST paths (SOAP with a bad query string,
+    /.well-known/*) return real 400/404 HTML pages. See errors/.
+rate_limit_signaling:
+  headers: []
+  status_on_exhaustion: null
+  note: >-
+    No rate-limit headers were observed on any response and none are documented. The only
+    published ceiling is the per-layer maxRecordCount transfer limit, which is a page size, not
+    a rate limit. See rate-limits/.
+request_id:
+  header: null
+  note: no request or correlation id header is returned.
+spatial_reference:
+  default_wkid: 3857
+  note: >-
+    Services report spatialReference latestWkid 3857 (Web Mercator); pass outSR=4326 for
+    WGS 84 coordinates.

@@ -1,0 +1,108 @@
+generated: '2026-09-17'
+method: derived
+status: candidate
+source: >-
+  arcgis/rayonier-arcgis-service-inventory.json and arcgis/rayonier-arcgis-layer-schemas.json —
+  operations verified callable anonymously on 2026-09-17.
+note: |
+  RAYONIER OPERATES NO MCP SERVER. Searched 2026-09-17: mcp.rayonier.com does not resolve;
+  POST /mcp on www.rayonier.com is 404; POST /mcp on gis.rayonier.com 302s to /arcgis/mcp,
+  which is the host's blanket /{anything} -> /arcgis/{anything} rewrite and answers an ArcGIS
+  Server 404 — not an MCP endpoint. Nothing in the Rayonier GitHub organization, nothing on
+  npm or PyPI, no /.well-known/ai-plugin.json on any host.
+
+  `status: candidate` and `mode: none`: every tool below is an API Evangelist PROPOSAL derived
+  one-for-one from an ArcGIS REST query operation that answered anonymously, not something
+  Rayonier runs. No endpoint is invented. The candidate is deliberately READ-ONLY: nine
+  services advertise editing capabilities, and a tool wrapping applyEdits on an anonymous
+  surface would be an invitation to vandalise a timber REIT's land records, so none is
+  proposed.
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: none
+  verified: probed
+server:
+  name: rayonier-gis
+  transport: http
+  url: null
+  authentication: none required — the Public and Hosted folders are anonymous
+tools:
+  - name: list_public_gis_services
+    description: List the 45 anonymously readable ArcGIS services (Public/ and Hosted/ folders) with their layers and capabilities.
+    rest: GET https://gis.rayonier.com/arcgis/rest/services/{folder}?f=json
+    inputSchema:
+      type: object
+      properties:
+        folder: {type: string, enum: [Public, Hosted]}
+      required: [folder]
+  - name: describe_layer
+    description: Return a layer's fields, geometry type, maxRecordCount and supported query formats.
+    rest: GET https://gis.rayonier.com/arcgis/rest/services/{service}/{type}/{layerId}?f=json
+    inputSchema:
+      type: object
+      properties:
+        service: {type: string, description: "e.g. Public/Rayonier_FEE_Ownership_Public"}
+        type: {type: string, enum: [FeatureServer, MapServer]}
+        layerId: {type: integer}
+      required: [service, type, layerId]
+  - name: query_fee_ownership
+    description: Query Rayonier fee-owned land polygons (6,216 features) by SQL where clause and/or bounding box; returns GeoJSON.
+    rest: GET https://gis.rayonier.com/arcgis/rest/services/Public/Rayonier_FEE_Ownership_Public/FeatureServer/0/query
+    inputSchema:
+      type: object
+      properties:
+        where: {type: string, default: "1=1"}
+        geometry: {type: string, description: "xmin,ymin,xmax,ymax envelope"}
+        inSR: {type: integer, default: 4326}
+        outSR: {type: integer, default: 4326}
+        outFields: {type: string, default: "ENTITYID,GISACRES"}
+        returnCountOnly: {type: boolean, default: false}
+        resultOffset: {type: integer}
+        resultRecordCount: {type: integer, maximum: 5000}
+        f: {type: string, enum: [json, geojson, pbf], default: geojson}
+  - name: query_hunting_lease_units
+    description: Query hunting recreational lease units (RLUs), permit areas, access points and food plots offered on rayonierhunting.com.
+    rest: GET https://gis.rayonier.com/arcgis/rest/services/Public/Hunting_RLU_Permits_Salesforce/MapServer/{layerId}/query
+    inputSchema:
+      type: object
+      properties:
+        layerId: {type: integer, description: "0 Hunting RLU, 2 Access Point, 3 Permit Area, 6 Food Plots, 7 Roads"}
+        where: {type: string, default: "1=1"}
+        geometry: {type: string}
+        outFields: {type: string, default: "*"}
+        returnGeometry: {type: boolean, default: false}
+        resultOffset: {type: integer}
+        resultRecordCount: {type: integer, maximum: 2000}
+      required: [layerId]
+  - name: query_bee_lease_sites
+    description: Query apiary lease polygons; layer 1 = Available, layer 0 = Currently Unavailable (rebuilt nightly, consumed by rayonierbeekeeping.com).
+    rest: GET https://gis.rayonier.com/arcgis/rest/services/Public/BeeLease_WebSite/MapServer/{layerId}/query
+    inputSchema:
+      type: object
+      properties:
+        layerId: {type: integer, enum: [0, 1]}
+        where: {type: string, default: "1=1", description: "e.g. STATE_SHORT='GA'"}
+        outFields: {type: string, default: "STATE,COUNTY,CalcGISAcres,StatusFlag,AsOfDate"}
+        returnGeometry: {type: boolean, default: false}
+      required: [layerId]
+  - name: query_fire_perimeters_on_rayonier_land
+    description: Query NIFC wildfire perimeters joined to Rayonier ownership (overlap acres, RYN flag).
+    rest: GET https://gis.rayonier.com/arcgis/rest/services/Public/FirePerimeters/FeatureServer/0/query
+    inputSchema:
+      type: object
+      properties:
+        where: {type: string, default: "1=1"}
+        outFields: {type: string, default: "IncidentName,IncidentGISAcres,FeatureStatus,DateCurrent"}
+        returnGeometry: {type: boolean, default: false}
+  - name: query_land_sale_tracts
+    description: Query real-estate tracts published to the Raydient Rural land-sales site.
+    rest: GET https://gis.rayonier.com/arcgis/rest/services/Public/RaydientWebSite_TractPolygon/MapServer/0/query
+    inputSchema:
+      type: object
+      properties:
+        where: {type: string, default: "1=1"}
+        outFields: {type: string, default: "TractID,TractName,ParcelCount,GISAcres,TractStatus"}
+        returnGeometry: {type: boolean, default: false}

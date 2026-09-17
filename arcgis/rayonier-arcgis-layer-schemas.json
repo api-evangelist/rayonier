@@ -1,0 +1,3588 @@
+{
+  "Public/Rayonier_FEE_Ownership_Public/FeatureServer/0": {
+    "name": "Rayonier Fee Ownership",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "tfm.dbo.TFM_INF_OWNERSHIP_ENTITY",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "ENTITYID",
+        "type": "esriFieldTypeSmallInteger",
+        "alias": "ENTITYID",
+        "domain": null
+      },
+      {
+        "name": "GISACRES",
+        "type": "esriFieldTypeDouble",
+        "alias": "GISACRES",
+        "domain": null
+      },
+      {
+        "name": "Shape__Area",
+        "type": "esriFieldTypeDouble",
+        "alias": "SHAPE.STArea()",
+        "domain": null
+      },
+      {
+        "name": "Shape__Length",
+        "type": "esriFieldTypeDouble",
+        "alias": "SHAPE.STLength()",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 5000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Query",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_Permits_Salesforce/MapServer/0": {
+    "name": "Hunting RLU",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "HuntingOID",
+        "type": "esriFieldTypeOID",
+        "alias": "HuntingOID",
+        "domain": null
+      },
+      {
+        "name": "HuntingID",
+        "type": "esriFieldTypeString",
+        "alias": "HuntingID",
+        "domain": null
+      },
+      {
+        "name": "Type",
+        "type": "esriFieldTypeString",
+        "alias": "Type",
+        "domain": null
+      },
+      {
+        "name": "Status",
+        "type": "esriFieldTypeString",
+        "alias": "Status",
+        "domain": null
+      },
+      {
+        "name": "FIPS_Max",
+        "type": "esriFieldTypeString",
+        "alias": "FIPS_Max",
+        "domain": null
+      },
+      {
+        "name": "StateName_Max",
+        "type": "esriFieldTypeString",
+        "alias": "StateName_Max",
+        "domain": null
+      },
+      {
+        "name": "CountyName_Max",
+        "type": "esriFieldTypeString",
+        "alias": "CountyName_Max",
+        "domain": null
+      },
+      {
+        "name": "GISAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "GISAcres",
+        "domain": null
+      },
+      {
+        "name": "NetAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "NetAcres",
+        "domain": null
+      },
+      {
+        "name": "CustServRegion_Max",
+        "type": "esriFieldTypeString",
+        "alias": "CustServRegion_Max",
+        "domain": null
+      },
+      {
+        "name": "ShutDownZone_Max",
+        "type": "esriFieldTypeString",
+        "alias": "ShutDownZone_Max",
+        "domain": null
+      },
+      {
+        "name": "ResourceUnitName",
+        "type": "esriFieldTypeString",
+        "alias": "ResourceUnitName",
+        "domain": null
+      },
+      {
+        "name": "Comments",
+        "type": "esriFieldTypeString",
+        "alias": "Comments",
+        "domain": null
+      },
+      {
+        "name": "AsOfDate",
+        "type": "esriFieldTypeDate",
+        "alias": "AsOfDate",
+        "domain": null
+      },
+      {
+        "name": "SHAPE",
+        "type": "esriFieldTypeGeometry",
+        "alias": "SHAPE",
+        "domain": null
+      },
+      {
+        "name": "Landowning_Entity_Max",
+        "type": "esriFieldTypeString",
+        "alias": "Landowning_Entity_Max",
+        "domain": null
+      },
+      {
+        "name": "IsDeleted",
+        "type": "esriFieldTypeString",
+        "alias": "IsDeleted",
+        "domain": null
+      },
+      {
+        "name": "Region",
+        "type": "esriFieldTypeString",
+        "alias": "Region",
+        "domain": null
+      },
+      {
+        "name": "StateAndCounty",
+        "type": "esriFieldTypeString",
+        "alias": "StateAndCounty",
+        "domain": null
+      },
+      {
+        "name": "ItemNumber",
+        "type": "esriFieldTypeString",
+        "alias": "ItemNumber",
+        "domain": null
+      },
+      {
+        "name": "Site",
+        "type": "esriFieldTypeString",
+        "alias": "Site",
+        "domain": null
+      },
+      {
+        "name": "LeaseName_Max",
+        "type": "esriFieldTypeString",
+        "alias": "LeaseName_Max",
+        "domain": null
+      },
+      {
+        "name": "SurchargeFee",
+        "type": "esriFieldTypeString",
+        "alias": "SurchargeFee",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_Permits_Salesforce/MapServer/1": {
+    "name": "Hunting RLU-Green",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "HuntingOID",
+        "type": "esriFieldTypeOID",
+        "alias": "HuntingOID",
+        "domain": null
+      },
+      {
+        "name": "HuntingID",
+        "type": "esriFieldTypeString",
+        "alias": "HuntingID",
+        "domain": null
+      },
+      {
+        "name": "Type",
+        "type": "esriFieldTypeString",
+        "alias": "Type",
+        "domain": null
+      },
+      {
+        "name": "Status",
+        "type": "esriFieldTypeString",
+        "alias": "Status",
+        "domain": null
+      },
+      {
+        "name": "FIPS_Max",
+        "type": "esriFieldTypeString",
+        "alias": "FIPS_Max",
+        "domain": null
+      },
+      {
+        "name": "StateName_Max",
+        "type": "esriFieldTypeString",
+        "alias": "StateName_Max",
+        "domain": null
+      },
+      {
+        "name": "CountyName_Max",
+        "type": "esriFieldTypeString",
+        "alias": "CountyName_Max",
+        "domain": null
+      },
+      {
+        "name": "GISAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "GISAcres",
+        "domain": null
+      },
+      {
+        "name": "NetAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "NetAcres",
+        "domain": null
+      },
+      {
+        "name": "CustServRegion_Max",
+        "type": "esriFieldTypeString",
+        "alias": "CustServRegion_Max",
+        "domain": null
+      },
+      {
+        "name": "ShutDownZone_Max",
+        "type": "esriFieldTypeString",
+        "alias": "ShutDownZone_Max",
+        "domain": null
+      },
+      {
+        "name": "ResourceUnitName",
+        "type": "esriFieldTypeString",
+        "alias": "ResourceUnitName",
+        "domain": null
+      },
+      {
+        "name": "Comments",
+        "type": "esriFieldTypeString",
+        "alias": "Comments",
+        "domain": null
+      },
+      {
+        "name": "AsOfDate",
+        "type": "esriFieldTypeDate",
+        "alias": "AsOfDate",
+        "domain": null
+      },
+      {
+        "name": "SHAPE",
+        "type": "esriFieldTypeGeometry",
+        "alias": "SHAPE",
+        "domain": null
+      },
+      {
+        "name": "Landowning_Entity_Max",
+        "type": "esriFieldTypeString",
+        "alias": "Landowning_Entity_Max",
+        "domain": null
+      },
+      {
+        "name": "IsDeleted",
+        "type": "esriFieldTypeString",
+        "alias": "IsDeleted",
+        "domain": null
+      },
+      {
+        "name": "Region",
+        "type": "esriFieldTypeString",
+        "alias": "Region",
+        "domain": null
+      },
+      {
+        "name": "StateAndCounty",
+        "type": "esriFieldTypeString",
+        "alias": "StateAndCounty",
+        "domain": null
+      },
+      {
+        "name": "ItemNumber",
+        "type": "esriFieldTypeString",
+        "alias": "ItemNumber",
+        "domain": null
+      },
+      {
+        "name": "Site",
+        "type": "esriFieldTypeString",
+        "alias": "Site",
+        "domain": null
+      },
+      {
+        "name": "LeaseName_Max",
+        "type": "esriFieldTypeString",
+        "alias": "LeaseName_Max",
+        "domain": null
+      },
+      {
+        "name": "SurchargeFee",
+        "type": "esriFieldTypeString",
+        "alias": "SurchargeFee",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_Permits_Salesforce/MapServer/2": {
+    "name": "Access Point",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPoint",
+    "description": "",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "AREA_NAME",
+        "type": "esriFieldTypeString",
+        "alias": "AREA_NAME",
+        "domain": null
+      },
+      {
+        "name": "AREA_TYPE",
+        "type": "esriFieldTypeString",
+        "alias": "AREA_TYPE",
+        "domain": null
+      },
+      {
+        "name": "FEATURE_TYPE",
+        "type": "esriFieldTypeString",
+        "alias": "FEATURE_TYPE",
+        "domain": null
+      },
+      {
+        "name": "FEATURE_NAME",
+        "type": "esriFieldTypeString",
+        "alias": "FEATURE_NAME",
+        "domain": null
+      },
+      {
+        "name": "FEATURE_DESC",
+        "type": "esriFieldTypeString",
+        "alias": "FEATURE_DESC",
+        "domain": null
+      },
+      {
+        "name": "SOURCE",
+        "type": "esriFieldTypeString",
+        "alias": "CREATEDBY",
+        "domain": null
+      },
+      {
+        "name": "SOURCE_DATE",
+        "type": "esriFieldTypeDate",
+        "alias": "SOURCE_DATE",
+        "domain": null
+      },
+      {
+        "name": "COMMENTS",
+        "type": "esriFieldTypeString",
+        "alias": "COMMENTS",
+        "domain": null
+      },
+      {
+        "name": "Shape",
+        "type": "esriFieldTypeGeometry",
+        "alias": "Shape",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_Permits_Salesforce/MapServer/3": {
+    "name": "Permit Area",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "HuntingOID",
+        "type": "esriFieldTypeOID",
+        "alias": "HuntingOID",
+        "domain": null
+      },
+      {
+        "name": "HuntingID",
+        "type": "esriFieldTypeString",
+        "alias": "HuntingID",
+        "domain": null
+      },
+      {
+        "name": "Type",
+        "type": "esriFieldTypeString",
+        "alias": "Type",
+        "domain": null
+      },
+      {
+        "name": "Status",
+        "type": "esriFieldTypeString",
+        "alias": "Status",
+        "domain": null
+      },
+      {
+        "name": "FIPS_Max",
+        "type": "esriFieldTypeString",
+        "alias": "FIPS_Max",
+        "domain": null
+      },
+      {
+        "name": "StateName_Max",
+        "type": "esriFieldTypeString",
+        "alias": "StateName_Max",
+        "domain": null
+      },
+      {
+        "name": "CountyName_Max",
+        "type": "esriFieldTypeString",
+        "alias": "CountyName_Max",
+        "domain": null
+      },
+      {
+        "name": "GISAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "GISAcres",
+        "domain": null
+      },
+      {
+        "name": "NetAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "NetAcres",
+        "domain": null
+      },
+      {
+        "name": "CustServRegion_Max",
+        "type": "esriFieldTypeString",
+        "alias": "CustServRegion_Max",
+        "domain": null
+      },
+      {
+        "name": "ShutDownZone_Max",
+        "type": "esriFieldTypeString",
+        "alias": "ShutDownZone_Max",
+        "domain": null
+      },
+      {
+        "name": "ResourceUnitName",
+        "type": "esriFieldTypeString",
+        "alias": "ResourceUnitName",
+        "domain": null
+      },
+      {
+        "name": "Comments",
+        "type": "esriFieldTypeString",
+        "alias": "Comments",
+        "domain": null
+      },
+      {
+        "name": "AsOfDate",
+        "type": "esriFieldTypeDate",
+        "alias": "AsOfDate",
+        "domain": null
+      },
+      {
+        "name": "SHAPE",
+        "type": "esriFieldTypeGeometry",
+        "alias": "SHAPE",
+        "domain": null
+      },
+      {
+        "name": "Landowning_Entity_Max",
+        "type": "esriFieldTypeString",
+        "alias": "Landowning_Entity_Max",
+        "domain": null
+      },
+      {
+        "name": "IsDeleted",
+        "type": "esriFieldTypeString",
+        "alias": "IsDeleted",
+        "domain": null
+      },
+      {
+        "name": "Region",
+        "type": "esriFieldTypeString",
+        "alias": "Region",
+        "domain": null
+      },
+      {
+        "name": "StateAndCounty",
+        "type": "esriFieldTypeString",
+        "alias": "StateAndCounty",
+        "domain": null
+      },
+      {
+        "name": "ItemNumber",
+        "type": "esriFieldTypeString",
+        "alias": "ItemNumber",
+        "domain": null
+      },
+      {
+        "name": "Site",
+        "type": "esriFieldTypeString",
+        "alias": "Site",
+        "domain": null
+      },
+      {
+        "name": "LeaseName_Max",
+        "type": "esriFieldTypeString",
+        "alias": "LeaseName_Max",
+        "domain": null
+      },
+      {
+        "name": "SurchargeFee",
+        "type": "esriFieldTypeString",
+        "alias": "SurchargeFee",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_Permits_Salesforce/MapServer/4": {
+    "name": "Access Route",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolyline",
+    "description": "",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "AREA_NAME",
+        "type": "esriFieldTypeString",
+        "alias": "AREA_NAME",
+        "domain": null
+      },
+      {
+        "name": "AREA_TYPE",
+        "type": "esriFieldTypeString",
+        "alias": "AREA_TYPE",
+        "domain": null
+      },
+      {
+        "name": "FEATURE_TYPE",
+        "type": "esriFieldTypeString",
+        "alias": "FEATURE_TYPE",
+        "domain": null
+      },
+      {
+        "name": "FEATURE_NAME",
+        "type": "esriFieldTypeString",
+        "alias": "FEATURE_NAME",
+        "domain": null
+      },
+      {
+        "name": "FEATURE_DESC",
+        "type": "esriFieldTypeString",
+        "alias": "FEATURE_DESC",
+        "domain": null
+      },
+      {
+        "name": "SOURCE",
+        "type": "esriFieldTypeString",
+        "alias": "CREATEDBY",
+        "domain": null
+      },
+      {
+        "name": "SOURCE_DATE",
+        "type": "esriFieldTypeDate",
+        "alias": "SOURCE_DATE",
+        "domain": null
+      },
+      {
+        "name": "COMMENTS",
+        "type": "esriFieldTypeString",
+        "alias": "COMMENTS",
+        "domain": null
+      },
+      {
+        "name": "Shape",
+        "type": "esriFieldTypeGeometry",
+        "alias": "Shape",
+        "domain": null
+      },
+      {
+        "name": "Shape.STLength()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STLength()",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_Permits_Salesforce/MapServer/5": {
+    "name": "Walk-in Area",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "AREA_NAME",
+        "type": "esriFieldTypeString",
+        "alias": "AREA_NAME",
+        "domain": null
+      },
+      {
+        "name": "AREA_TYPE",
+        "type": "esriFieldTypeString",
+        "alias": "AREA_TYPE",
+        "domain": null
+      },
+      {
+        "name": "FEATURE_TYPE",
+        "type": "esriFieldTypeString",
+        "alias": "FEATURE_TYPE",
+        "domain": null
+      },
+      {
+        "name": "FEATURE_NAME",
+        "type": "esriFieldTypeString",
+        "alias": "FEATURE_NAME",
+        "domain": null
+      },
+      {
+        "name": "FEATURE_DESC",
+        "type": "esriFieldTypeString",
+        "alias": "FEATURE_DESC",
+        "domain": null
+      },
+      {
+        "name": "SOURCE",
+        "type": "esriFieldTypeString",
+        "alias": "CREATEDBY",
+        "domain": null
+      },
+      {
+        "name": "SOURCE_DATE",
+        "type": "esriFieldTypeDate",
+        "alias": "SOURCE_DATE",
+        "domain": null
+      },
+      {
+        "name": "COMMENTS",
+        "type": "esriFieldTypeString",
+        "alias": "COMMENTS",
+        "domain": null
+      },
+      {
+        "name": "Shape",
+        "type": "esriFieldTypeGeometry",
+        "alias": "Shape",
+        "domain": null
+      },
+      {
+        "name": "Shape.STArea()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STArea()",
+        "domain": null
+      },
+      {
+        "name": "Shape.STLength()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STLength()",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_Permits_Salesforce/MapServer/6": {
+    "name": "Rayonier Food Plots",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPoint",
+    "description": "",
+    "fields": [
+      {
+        "name": "HUNTINGPOIID",
+        "type": "esriFieldTypeInteger",
+        "alias": "HuntingPOIID",
+        "domain": null
+      },
+      {
+        "name": "HUNTINGOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "HuntingOID",
+        "domain": null
+      },
+      {
+        "name": "HUNTINGID",
+        "type": "esriFieldTypeString",
+        "alias": "HuntingID",
+        "domain": null
+      },
+      {
+        "name": "POITYPE",
+        "type": "esriFieldTypeString",
+        "alias": "POIType",
+        "domain": null
+      },
+      {
+        "name": "STATUS",
+        "type": "esriFieldTypeString",
+        "alias": "Status",
+        "domain": null
+      },
+      {
+        "name": "ISRENTAL",
+        "type": "esriFieldTypeString",
+        "alias": "IsRental",
+        "domain": null
+      },
+      {
+        "name": "HUNTINGPOIACRES",
+        "type": "esriFieldTypeDouble",
+        "alias": "HuntingPOIAcres",
+        "domain": null
+      },
+      {
+        "name": "RESOURCEUNITNAME",
+        "type": "esriFieldTypeString",
+        "alias": "ResourceUnitName",
+        "domain": null
+      },
+      {
+        "name": "COMMENTS",
+        "type": "esriFieldTypeString",
+        "alias": "Comments",
+        "domain": null
+      },
+      {
+        "name": "ASOFDATE",
+        "type": "esriFieldTypeDate",
+        "alias": "AsOfDate",
+        "domain": null
+      },
+      {
+        "name": "SHAPE",
+        "type": "esriFieldTypeGeometry",
+        "alias": "SHAPE",
+        "domain": null
+      },
+      {
+        "name": "ISDELETED",
+        "type": "esriFieldTypeString",
+        "alias": "IsDeleted",
+        "domain": null
+      },
+      {
+        "name": "ITEMNUMBER_POI",
+        "type": "esriFieldTypeString",
+        "alias": "ItemNumber_POI",
+        "domain": null
+      },
+      {
+        "name": "HUNTINGPOIOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "HUNTINGPOIOID",
+        "domain": null
+      },
+      {
+        "name": "ESRI_OID",
+        "type": "esriFieldTypeOID",
+        "alias": "ESRI_OID",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_Permits_Salesforce/MapServer/7": {
+    "name": "Roads",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolyline",
+    "description": "",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "ROADNAME",
+        "type": "esriFieldTypeString",
+        "alias": "ROADNAME",
+        "domain": null
+      },
+      {
+        "name": "ALTERNATEROADNAME",
+        "type": "esriFieldTypeString",
+        "alias": "ALTERNATEROADNAME",
+        "domain": null
+      },
+      {
+        "name": "ROADCLASS",
+        "type": "esriFieldTypeString",
+        "alias": "ROADCLASS",
+        "domain": null
+      },
+      {
+        "name": "Shape",
+        "type": "esriFieldTypeGeometry",
+        "alias": "Shape",
+        "domain": null
+      },
+      {
+        "name": "Shape.STLength()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STLength()",
+        "domain": null
+      },
+      {
+        "name": "MODIFIEDBY",
+        "type": "esriFieldTypeString",
+        "alias": "MODIFIEDBY",
+        "domain": null
+      },
+      {
+        "name": "MODIFIEDON",
+        "type": "esriFieldTypeDate",
+        "alias": "MODIFIEDON",
+        "domain": null
+      },
+      {
+        "name": "MODIFIEDUSING",
+        "type": "esriFieldTypeString",
+        "alias": "MODIFIEDUSING",
+        "domain": null
+      },
+      {
+        "name": "CREATEDBY",
+        "type": "esriFieldTypeString",
+        "alias": "CREATEDBY",
+        "domain": null
+      },
+      {
+        "name": "CREATEDON",
+        "type": "esriFieldTypeDate",
+        "alias": "CREATEDON",
+        "domain": null
+      },
+      {
+        "name": "CREATEDUSING",
+        "type": "esriFieldTypeString",
+        "alias": "CREATEDUSING",
+        "domain": null
+      },
+      {
+        "name": "INSTANCEID",
+        "type": "esriFieldTypeString",
+        "alias": "INSTANCEID",
+        "domain": null
+      },
+      {
+        "name": "DOCUMENTKEY",
+        "type": "esriFieldTypeInteger",
+        "alias": "DOCUMENTKEY",
+        "domain": null
+      },
+      {
+        "name": "COMMENTS",
+        "type": "esriFieldTypeString",
+        "alias": "COMMENTS",
+        "domain": null
+      },
+      {
+        "name": "IMPORTERPK",
+        "type": "esriFieldTypeString",
+        "alias": "IMPORTERPK",
+        "domain": null
+      },
+      {
+        "name": "IMPORTERFK",
+        "type": "esriFieldTypeString",
+        "alias": "IMPORTERFK",
+        "domain": null
+      },
+      {
+        "name": "TFM_DATAMIGRATIONKEY",
+        "type": "esriFieldTypeString",
+        "alias": "TFM_DATAMIGRATIONKEY",
+        "domain": null
+      },
+      {
+        "name": "FROMMEASURE",
+        "type": "esriFieldTypeInteger",
+        "alias": "FROMMEASURE",
+        "domain": null
+      },
+      {
+        "name": "TOMEASURE",
+        "type": "esriFieldTypeInteger",
+        "alias": "TOMEASURE",
+        "domain": null
+      },
+      {
+        "name": "ROADOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "ROADOID",
+        "domain": null
+      },
+      {
+        "name": "SURFACETYPE",
+        "type": "esriFieldTypeString",
+        "alias": "SURFACETYPE",
+        "domain": null
+      },
+      {
+        "name": "COMPLETEDATE",
+        "type": "esriFieldTypeDate",
+        "alias": "COMPLETEDATE",
+        "domain": null
+      },
+      {
+        "name": "RESOURCEUNITOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "RESOURCEUNITOID",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_Permits_Salesforce/MapServer/8": {
+    "name": "Hunting RLU - MidZoom",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "HuntingOID",
+        "type": "esriFieldTypeOID",
+        "alias": "HuntingOID",
+        "domain": null
+      },
+      {
+        "name": "HuntingID",
+        "type": "esriFieldTypeString",
+        "alias": "HuntingID",
+        "domain": null
+      },
+      {
+        "name": "Type",
+        "type": "esriFieldTypeString",
+        "alias": "Type",
+        "domain": null
+      },
+      {
+        "name": "Status",
+        "type": "esriFieldTypeString",
+        "alias": "Status",
+        "domain": null
+      },
+      {
+        "name": "FIPS_Max",
+        "type": "esriFieldTypeString",
+        "alias": "FIPS_Max",
+        "domain": null
+      },
+      {
+        "name": "StateName_Max",
+        "type": "esriFieldTypeString",
+        "alias": "StateName_Max",
+        "domain": null
+      },
+      {
+        "name": "CountyName_Max",
+        "type": "esriFieldTypeString",
+        "alias": "CountyName_Max",
+        "domain": null
+      },
+      {
+        "name": "GISAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "GISAcres",
+        "domain": null
+      },
+      {
+        "name": "NetAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "NetAcres",
+        "domain": null
+      },
+      {
+        "name": "CustServRegion_Max",
+        "type": "esriFieldTypeString",
+        "alias": "CustServRegion_Max",
+        "domain": null
+      },
+      {
+        "name": "ShutDownZone_Max",
+        "type": "esriFieldTypeString",
+        "alias": "ShutDownZone_Max",
+        "domain": null
+      },
+      {
+        "name": "ResourceUnitName",
+        "type": "esriFieldTypeString",
+        "alias": "ResourceUnitName",
+        "domain": null
+      },
+      {
+        "name": "Comments",
+        "type": "esriFieldTypeString",
+        "alias": "Comments",
+        "domain": null
+      },
+      {
+        "name": "AsOfDate",
+        "type": "esriFieldTypeDate",
+        "alias": "AsOfDate",
+        "domain": null
+      },
+      {
+        "name": "SHAPE",
+        "type": "esriFieldTypeGeometry",
+        "alias": "SHAPE",
+        "domain": null
+      },
+      {
+        "name": "Landowning_Entity_Max",
+        "type": "esriFieldTypeString",
+        "alias": "Landowning_Entity_Max",
+        "domain": null
+      },
+      {
+        "name": "IsDeleted",
+        "type": "esriFieldTypeString",
+        "alias": "IsDeleted",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_Permits_Salesforce/MapServer/9": {
+    "name": "Hunting RLU-Green - MidZoom",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "HuntingOID",
+        "type": "esriFieldTypeOID",
+        "alias": "HuntingOID",
+        "domain": null
+      },
+      {
+        "name": "HuntingID",
+        "type": "esriFieldTypeString",
+        "alias": "HuntingID",
+        "domain": null
+      },
+      {
+        "name": "Type",
+        "type": "esriFieldTypeString",
+        "alias": "Type",
+        "domain": null
+      },
+      {
+        "name": "Status",
+        "type": "esriFieldTypeString",
+        "alias": "Status",
+        "domain": null
+      },
+      {
+        "name": "FIPS_Max",
+        "type": "esriFieldTypeString",
+        "alias": "FIPS_Max",
+        "domain": null
+      },
+      {
+        "name": "StateName_Max",
+        "type": "esriFieldTypeString",
+        "alias": "StateName_Max",
+        "domain": null
+      },
+      {
+        "name": "CountyName_Max",
+        "type": "esriFieldTypeString",
+        "alias": "CountyName_Max",
+        "domain": null
+      },
+      {
+        "name": "GISAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "GISAcres",
+        "domain": null
+      },
+      {
+        "name": "NetAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "NetAcres",
+        "domain": null
+      },
+      {
+        "name": "CustServRegion_Max",
+        "type": "esriFieldTypeString",
+        "alias": "CustServRegion_Max",
+        "domain": null
+      },
+      {
+        "name": "ShutDownZone_Max",
+        "type": "esriFieldTypeString",
+        "alias": "ShutDownZone_Max",
+        "domain": null
+      },
+      {
+        "name": "ResourceUnitName",
+        "type": "esriFieldTypeString",
+        "alias": "ResourceUnitName",
+        "domain": null
+      },
+      {
+        "name": "Comments",
+        "type": "esriFieldTypeString",
+        "alias": "Comments",
+        "domain": null
+      },
+      {
+        "name": "AsOfDate",
+        "type": "esriFieldTypeDate",
+        "alias": "AsOfDate",
+        "domain": null
+      },
+      {
+        "name": "SHAPE",
+        "type": "esriFieldTypeGeometry",
+        "alias": "SHAPE",
+        "domain": null
+      },
+      {
+        "name": "Landowning_Entity_Max",
+        "type": "esriFieldTypeString",
+        "alias": "Landowning_Entity_Max",
+        "domain": null
+      },
+      {
+        "name": "IsDeleted",
+        "type": "esriFieldTypeString",
+        "alias": "IsDeleted",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_Permits_Salesforce/MapServer/10": {
+    "name": "State",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "U.S. States (Generalized) represents the 50 states and the District of Columbia of the United States.",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "STATE_NAME",
+        "type": "esriFieldTypeString",
+        "alias": "STATE_NAME",
+        "domain": null
+      },
+      {
+        "name": "STATE_FIPS",
+        "type": "esriFieldTypeString",
+        "alias": "STATE_FIPS",
+        "domain": null
+      },
+      {
+        "name": "SUB_REGION",
+        "type": "esriFieldTypeString",
+        "alias": "SUB_REGION",
+        "domain": null
+      },
+      {
+        "name": "STATE_ABBR",
+        "type": "esriFieldTypeString",
+        "alias": "STATE_ABBR",
+        "domain": null
+      },
+      {
+        "name": "Shape",
+        "type": "esriFieldTypeGeometry",
+        "alias": "Shape",
+        "domain": null
+      },
+      {
+        "name": "Shape.STArea()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STArea()",
+        "domain": null
+      },
+      {
+        "name": "Shape.STLength()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STLength()",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_Permits_Salesforce/MapServer/11": {
+    "name": "County",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "U.S. Counties (Generalized) represents the counties of the United States in the 50 states and the District of Columbia.",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "NAME",
+        "type": "esriFieldTypeString",
+        "alias": "NAME",
+        "domain": null
+      },
+      {
+        "name": "STATE_NAME",
+        "type": "esriFieldTypeString",
+        "alias": "STATE_NAME",
+        "domain": null
+      },
+      {
+        "name": "FIPS",
+        "type": "esriFieldTypeString",
+        "alias": "FIPS",
+        "domain": null
+      },
+      {
+        "name": "Shape",
+        "type": "esriFieldTypeGeometry",
+        "alias": "Shape",
+        "domain": null
+      },
+      {
+        "name": "Shape.STArea()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STArea()",
+        "domain": null
+      },
+      {
+        "name": "Shape.STLength()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STLength()",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_Permits_Salesforce/MapServer/12": {
+    "name": "Permit Area-Purple",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "HuntingOID",
+        "type": "esriFieldTypeOID",
+        "alias": "HuntingOID",
+        "domain": null
+      },
+      {
+        "name": "HuntingID",
+        "type": "esriFieldTypeString",
+        "alias": "HuntingID",
+        "domain": null
+      },
+      {
+        "name": "Type",
+        "type": "esriFieldTypeString",
+        "alias": "Type",
+        "domain": null
+      },
+      {
+        "name": "Status",
+        "type": "esriFieldTypeString",
+        "alias": "Status",
+        "domain": null
+      },
+      {
+        "name": "FIPS_Max",
+        "type": "esriFieldTypeString",
+        "alias": "FIPS_Max",
+        "domain": null
+      },
+      {
+        "name": "StateName_Max",
+        "type": "esriFieldTypeString",
+        "alias": "StateName_Max",
+        "domain": null
+      },
+      {
+        "name": "CountyName_Max",
+        "type": "esriFieldTypeString",
+        "alias": "CountyName_Max",
+        "domain": null
+      },
+      {
+        "name": "GISAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "GISAcres",
+        "domain": null
+      },
+      {
+        "name": "NetAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "NetAcres",
+        "domain": null
+      },
+      {
+        "name": "CustServRegion_Max",
+        "type": "esriFieldTypeString",
+        "alias": "CustServRegion_Max",
+        "domain": null
+      },
+      {
+        "name": "ShutDownZone_Max",
+        "type": "esriFieldTypeString",
+        "alias": "ShutDownZone_Max",
+        "domain": null
+      },
+      {
+        "name": "ResourceUnitName",
+        "type": "esriFieldTypeString",
+        "alias": "ResourceUnitName",
+        "domain": null
+      },
+      {
+        "name": "Comments",
+        "type": "esriFieldTypeString",
+        "alias": "Comments",
+        "domain": null
+      },
+      {
+        "name": "AsOfDate",
+        "type": "esriFieldTypeDate",
+        "alias": "AsOfDate",
+        "domain": null
+      },
+      {
+        "name": "SHAPE",
+        "type": "esriFieldTypeGeometry",
+        "alias": "SHAPE",
+        "domain": null
+      },
+      {
+        "name": "Landowning_Entity_Max",
+        "type": "esriFieldTypeString",
+        "alias": "Landowning_Entity_Max",
+        "domain": null
+      },
+      {
+        "name": "IsDeleted",
+        "type": "esriFieldTypeString",
+        "alias": "IsDeleted",
+        "domain": null
+      },
+      {
+        "name": "SurchargeFee",
+        "type": "esriFieldTypeString",
+        "alias": "SurchargeFee",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/BeeLease_WebSite/MapServer/0": {
+    "name": "Currently Unavailable",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "Shape",
+        "type": "esriFieldTypeGeometry",
+        "alias": "SHAPE",
+        "domain": null
+      },
+      {
+        "name": "STATE",
+        "type": "esriFieldTypeString",
+        "alias": "STATE",
+        "domain": null
+      },
+      {
+        "name": "STATE_SHORT",
+        "type": "esriFieldTypeString",
+        "alias": "STATE_SHORT",
+        "domain": null
+      },
+      {
+        "name": "COUNTY",
+        "type": "esriFieldTypeString",
+        "alias": "COUNTY",
+        "domain": null
+      },
+      {
+        "name": "FIPS",
+        "type": "esriFieldTypeString",
+        "alias": "FIPS",
+        "domain": null
+      },
+      {
+        "name": "ANEOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "ANEOID",
+        "domain": null
+      },
+      {
+        "name": "OwnershipOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "OwnershipOID",
+        "domain": null
+      },
+      {
+        "name": "RESOURCEUNITOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "RESOURCEUNITOID",
+        "domain": null
+      },
+      {
+        "name": "ACTIVITYPOLYGONID",
+        "type": "esriFieldTypeString",
+        "alias": "ACTIVITYPOLYGONID",
+        "domain": null
+      },
+      {
+        "name": "CalcGISAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "CalcGISAcres",
+        "domain": null
+      },
+      {
+        "name": "StatusFlag",
+        "type": "esriFieldTypeString",
+        "alias": "StatusFlag",
+        "domain": null
+      },
+      {
+        "name": "AsOfDate",
+        "type": "esriFieldTypeDate",
+        "alias": "AsOfDate",
+        "domain": null
+      },
+      {
+        "name": "CMPTWPDESC",
+        "type": "esriFieldTypeString",
+        "alias": "CMPTWPDESC",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/BeeLease_WebSite/MapServer/1": {
+    "name": "Available",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "Shape",
+        "type": "esriFieldTypeGeometry",
+        "alias": "SHAPE",
+        "domain": null
+      },
+      {
+        "name": "STATE",
+        "type": "esriFieldTypeString",
+        "alias": "STATE",
+        "domain": null
+      },
+      {
+        "name": "STATE_SHORT",
+        "type": "esriFieldTypeString",
+        "alias": "STATE_SHORT",
+        "domain": null
+      },
+      {
+        "name": "COUNTY",
+        "type": "esriFieldTypeString",
+        "alias": "COUNTY",
+        "domain": null
+      },
+      {
+        "name": "FIPS",
+        "type": "esriFieldTypeString",
+        "alias": "FIPS",
+        "domain": null
+      },
+      {
+        "name": "ANEOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "ANEOID",
+        "domain": null
+      },
+      {
+        "name": "OwnershipOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "OwnershipOID",
+        "domain": null
+      },
+      {
+        "name": "RESOURCEUNITOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "RESOURCEUNITOID",
+        "domain": null
+      },
+      {
+        "name": "ACTIVITYPOLYGONID",
+        "type": "esriFieldTypeString",
+        "alias": "ACTIVITYPOLYGONID",
+        "domain": null
+      },
+      {
+        "name": "CalcGISAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "CalcGISAcres",
+        "domain": null
+      },
+      {
+        "name": "StatusFlag",
+        "type": "esriFieldTypeString",
+        "alias": "StatusFlag",
+        "domain": null
+      },
+      {
+        "name": "AsOfDate",
+        "type": "esriFieldTypeDate",
+        "alias": "AsOfDate",
+        "domain": null
+      },
+      {
+        "name": "CMPTWPDESC",
+        "type": "esriFieldTypeString",
+        "alias": "CMPTWPDESC",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/FirePerimeters/FeatureServer/0": {
+    "name": "NIFC Fire Perimeters",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "NIFC_OID",
+        "type": "esriFieldTypeInteger",
+        "alias": "NIFC_OID",
+        "domain": null
+      },
+      {
+        "name": "IncidentName",
+        "type": "esriFieldTypeString",
+        "alias": "IncidentName",
+        "domain": null
+      },
+      {
+        "name": "FeatureCategory",
+        "type": "esriFieldTypeString",
+        "alias": "FeatureCategory",
+        "domain": null
+      },
+      {
+        "name": "MapMethod",
+        "type": "esriFieldTypeString",
+        "alias": "MapMethod",
+        "domain": null
+      },
+      {
+        "name": "Comments",
+        "type": "esriFieldTypeString",
+        "alias": "Comments",
+        "domain": null
+      },
+      {
+        "name": "IncidentGISAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "IncidentGISAcres",
+        "domain": null
+      },
+      {
+        "name": "Label",
+        "type": "esriFieldTypeString",
+        "alias": "Label",
+        "domain": null
+      },
+      {
+        "name": "FeatureAccess",
+        "type": "esriFieldTypeString",
+        "alias": "FeatureAccess",
+        "domain": null
+      },
+      {
+        "name": "FeatureStatus",
+        "type": "esriFieldTypeString",
+        "alias": "FeatureStatus",
+        "domain": null
+      },
+      {
+        "name": "CreateDate",
+        "type": "esriFieldTypeDate",
+        "alias": "CreateDate",
+        "domain": null
+      },
+      {
+        "name": "DateCurrent",
+        "type": "esriFieldTypeDate",
+        "alias": "DateCurrent",
+        "domain": null
+      },
+      {
+        "name": "PolygonDateTime",
+        "type": "esriFieldTypeDate",
+        "alias": "PolygonDateTime",
+        "domain": null
+      },
+      {
+        "name": "ComplexName",
+        "type": "esriFieldTypeString",
+        "alias": "ComplexName",
+        "domain": null
+      },
+      {
+        "name": "ComplexID",
+        "type": "esriFieldTypeString",
+        "alias": "ComplexID",
+        "domain": null
+      },
+      {
+        "name": "GACC",
+        "type": "esriFieldTypeString",
+        "alias": "GACC",
+        "domain": null
+      },
+      {
+        "name": "IMTName",
+        "type": "esriFieldTypeString",
+        "alias": "IMTName",
+        "domain": null
+      },
+      {
+        "name": "UnitID",
+        "type": "esriFieldTypeString",
+        "alias": "UnitID",
+        "domain": null
+      },
+      {
+        "name": "LocalIncidentID",
+        "type": "esriFieldTypeString",
+        "alias": "LocalIncidentID",
+        "domain": null
+      },
+      {
+        "name": "OWNERSHIPOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "OWNERSHIPOID",
+        "domain": null
+      },
+      {
+        "name": "ENTITYID",
+        "type": "esriFieldTypeSmallInteger",
+        "alias": "ENTITYID",
+        "domain": null
+      },
+      {
+        "name": "OWNERSHIP_TYPE",
+        "type": "esriFieldTypeString",
+        "alias": "OWNERSHIP_TYPE",
+        "domain": null
+      },
+      {
+        "name": "OVERLAP_GISACRES",
+        "type": "esriFieldTypeDouble",
+        "alias": "OVERLAP_GISACRES",
+        "domain": null
+      },
+      {
+        "name": "RYNFlag",
+        "type": "esriFieldTypeString",
+        "alias": "RYNFlag",
+        "domain": null
+      },
+      {
+        "name": "AsOfDate",
+        "type": "esriFieldTypeDate",
+        "alias": "AsOfDate",
+        "domain": null
+      },
+      {
+        "name": "Shape__Area",
+        "type": "esriFieldTypeDouble",
+        "alias": "SHAPE.STArea()",
+        "domain": null
+      },
+      {
+        "name": "Shape__Length",
+        "type": "esriFieldTypeDouble",
+        "alias": "SHAPE.STLength()",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Query",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/RaydientWebSite_TractPolygon/MapServer/0": {
+    "name": "Tract_Polygon",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "TractID",
+        "type": "esriFieldTypeOID",
+        "alias": "TractID",
+        "domain": null
+      },
+      {
+        "name": "TractName",
+        "type": "esriFieldTypeString",
+        "alias": "TractName",
+        "domain": null
+      },
+      {
+        "name": "SHAPE",
+        "type": "esriFieldTypeGeometry",
+        "alias": "SHAPE",
+        "domain": null
+      },
+      {
+        "name": "ParcelCount",
+        "type": "esriFieldTypeInteger",
+        "alias": "ParcelCount",
+        "domain": null
+      },
+      {
+        "name": "GISAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "GISAcres",
+        "domain": null
+      },
+      {
+        "name": "TractStatus",
+        "type": "esriFieldTypeString",
+        "alias": "TractStatus",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_TimberSales_SalesForce/MapServer/0": {
+    "name": "Active Harvests",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "TSOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "TSOID",
+        "domain": null
+      },
+      {
+        "name": "HuntingOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "HuntingOID",
+        "domain": null
+      },
+      {
+        "name": "UniqueKey",
+        "type": "esriFieldTypeString",
+        "alias": "UniqueKey",
+        "domain": null
+      },
+      {
+        "name": "TS",
+        "type": "esriFieldTypeString",
+        "alias": "TS",
+        "domain": null
+      },
+      {
+        "name": "HuntingID",
+        "type": "esriFieldTypeString",
+        "alias": "HuntingID",
+        "domain": null
+      },
+      {
+        "name": "CutType",
+        "type": "esriFieldTypeString",
+        "alias": "CutType",
+        "domain": null
+      },
+      {
+        "name": "TSStatus",
+        "type": "esriFieldTypeString",
+        "alias": "TSStatus",
+        "domain": null
+      },
+      {
+        "name": "ModifiedOn",
+        "type": "esriFieldTypeDate",
+        "alias": "ModifiedOn",
+        "domain": null
+      },
+      {
+        "name": "LastDateOfProcess",
+        "type": "esriFieldTypeDate",
+        "alias": "LastDateOfProcess",
+        "domain": null
+      },
+      {
+        "name": "ActionFlag",
+        "type": "esriFieldTypeString",
+        "alias": "ActionFlag",
+        "domain": null
+      },
+      {
+        "name": "OverlayAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "OverlayAcres",
+        "domain": null
+      },
+      {
+        "name": "Shape",
+        "type": "esriFieldTypeGeometry",
+        "alias": "Shape",
+        "domain": null
+      },
+      {
+        "name": "Shape.STArea()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STArea()",
+        "domain": null
+      },
+      {
+        "name": "Shape.STLength()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STLength()",
+        "domain": null
+      },
+      {
+        "name": "Type",
+        "type": "esriFieldTypeString",
+        "alias": "Type",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_TimberSales_SalesForce/MapServer/1": {
+    "name": "Completed Harvests < 30 days",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "TSOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "TSOID",
+        "domain": null
+      },
+      {
+        "name": "HuntingOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "HuntingOID",
+        "domain": null
+      },
+      {
+        "name": "UniqueKey",
+        "type": "esriFieldTypeString",
+        "alias": "UniqueKey",
+        "domain": null
+      },
+      {
+        "name": "TS",
+        "type": "esriFieldTypeString",
+        "alias": "TS",
+        "domain": null
+      },
+      {
+        "name": "HuntingID",
+        "type": "esriFieldTypeString",
+        "alias": "HuntingID",
+        "domain": null
+      },
+      {
+        "name": "CutType",
+        "type": "esriFieldTypeString",
+        "alias": "CutType",
+        "domain": null
+      },
+      {
+        "name": "TSStatus",
+        "type": "esriFieldTypeString",
+        "alias": "TSStatus",
+        "domain": null
+      },
+      {
+        "name": "ModifiedOn",
+        "type": "esriFieldTypeDate",
+        "alias": "ModifiedOn",
+        "domain": null
+      },
+      {
+        "name": "LastDateOfProcess",
+        "type": "esriFieldTypeDate",
+        "alias": "LastDateOfProcess",
+        "domain": null
+      },
+      {
+        "name": "ActionFlag",
+        "type": "esriFieldTypeString",
+        "alias": "ActionFlag",
+        "domain": null
+      },
+      {
+        "name": "OverlayAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "OverlayAcres",
+        "domain": null
+      },
+      {
+        "name": "Shape",
+        "type": "esriFieldTypeGeometry",
+        "alias": "Shape",
+        "domain": null
+      },
+      {
+        "name": "Shape.STArea()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STArea()",
+        "domain": null
+      },
+      {
+        "name": "Shape.STLength()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STLength()",
+        "domain": null
+      },
+      {
+        "name": "Type",
+        "type": "esriFieldTypeString",
+        "alias": "Type",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_TimberSales_SalesForce/MapServer/2": {
+    "name": "RLU",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeInteger",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "Comments",
+        "type": "esriFieldTypeString",
+        "alias": "Comments",
+        "domain": null
+      },
+      {
+        "name": "Type",
+        "type": "esriFieldTypeString",
+        "alias": "Type",
+        "domain": null
+      },
+      {
+        "name": "GISAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "GISAcres",
+        "domain": null
+      },
+      {
+        "name": "Status",
+        "type": "esriFieldTypeString",
+        "alias": "Status",
+        "domain": null
+      },
+      {
+        "name": "SHAPE",
+        "type": "esriFieldTypeGeometry",
+        "alias": "SHAPE",
+        "domain": null
+      },
+      {
+        "name": "HuntingID",
+        "type": "esriFieldTypeString",
+        "alias": "HuntingID",
+        "domain": null
+      },
+      {
+        "name": "FIPS_Max",
+        "type": "esriFieldTypeString",
+        "alias": "FIPS_Max",
+        "domain": null
+      },
+      {
+        "name": "StateName_Max",
+        "type": "esriFieldTypeString",
+        "alias": "StateName_Max",
+        "domain": null
+      },
+      {
+        "name": "CountyName_Max",
+        "type": "esriFieldTypeString",
+        "alias": "CountyName_Max",
+        "domain": null
+      },
+      {
+        "name": "NetAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "NetAcres",
+        "domain": null
+      },
+      {
+        "name": "CustServRegion",
+        "type": "esriFieldTypeString",
+        "alias": "CustServRegion",
+        "domain": null
+      },
+      {
+        "name": "ShutDownZone_Max",
+        "type": "esriFieldTypeString",
+        "alias": "ShutDownZone_Max",
+        "domain": null
+      },
+      {
+        "name": "Landowning_Entity_Max",
+        "type": "esriFieldTypeString",
+        "alias": "Landowning_Entity_Max",
+        "domain": null
+      },
+      {
+        "name": "ResourceUnitName",
+        "type": "esriFieldTypeString",
+        "alias": "ResourceUnitName",
+        "domain": null
+      },
+      {
+        "name": "AsOfDate",
+        "type": "esriFieldTypeDate",
+        "alias": "AsOfDate",
+        "domain": null
+      },
+      {
+        "name": "IsDeleted",
+        "type": "esriFieldTypeString",
+        "alias": "IsDeleted",
+        "domain": null
+      },
+      {
+        "name": "ESRI_OID",
+        "type": "esriFieldTypeOID",
+        "alias": "ESRI_OID",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_StandAgeClass_Salesforce/MapServer/0": {
+    "name": "Roads",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolyline",
+    "description": "",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "ROADNAME",
+        "type": "esriFieldTypeString",
+        "alias": "ROADNAME",
+        "domain": null
+      },
+      {
+        "name": "ALTERNATEROADNAME",
+        "type": "esriFieldTypeString",
+        "alias": "ALTERNATEROADNAME",
+        "domain": null
+      },
+      {
+        "name": "ROADCLASS",
+        "type": "esriFieldTypeString",
+        "alias": "ROADCLASS",
+        "domain": null
+      },
+      {
+        "name": "Shape",
+        "type": "esriFieldTypeGeometry",
+        "alias": "Shape",
+        "domain": null
+      },
+      {
+        "name": "Shape.STLength()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STLength()",
+        "domain": null
+      },
+      {
+        "name": "MODIFIEDBY",
+        "type": "esriFieldTypeString",
+        "alias": "MODIFIEDBY",
+        "domain": null
+      },
+      {
+        "name": "MODIFIEDON",
+        "type": "esriFieldTypeDate",
+        "alias": "MODIFIEDON",
+        "domain": null
+      },
+      {
+        "name": "MODIFIEDUSING",
+        "type": "esriFieldTypeString",
+        "alias": "MODIFIEDUSING",
+        "domain": null
+      },
+      {
+        "name": "CREATEDBY",
+        "type": "esriFieldTypeString",
+        "alias": "CREATEDBY",
+        "domain": null
+      },
+      {
+        "name": "CREATEDON",
+        "type": "esriFieldTypeDate",
+        "alias": "CREATEDON",
+        "domain": null
+      },
+      {
+        "name": "CREATEDUSING",
+        "type": "esriFieldTypeString",
+        "alias": "CREATEDUSING",
+        "domain": null
+      },
+      {
+        "name": "INSTANCEID",
+        "type": "esriFieldTypeString",
+        "alias": "INSTANCEID",
+        "domain": null
+      },
+      {
+        "name": "DOCUMENTKEY",
+        "type": "esriFieldTypeInteger",
+        "alias": "DOCUMENTKEY",
+        "domain": null
+      },
+      {
+        "name": "COMMENTS",
+        "type": "esriFieldTypeString",
+        "alias": "COMMENTS",
+        "domain": null
+      },
+      {
+        "name": "IMPORTERPK",
+        "type": "esriFieldTypeString",
+        "alias": "IMPORTERPK",
+        "domain": null
+      },
+      {
+        "name": "IMPORTERFK",
+        "type": "esriFieldTypeString",
+        "alias": "IMPORTERFK",
+        "domain": null
+      },
+      {
+        "name": "TFM_DATAMIGRATIONKEY",
+        "type": "esriFieldTypeString",
+        "alias": "TFM_DATAMIGRATIONKEY",
+        "domain": null
+      },
+      {
+        "name": "FROMMEASURE",
+        "type": "esriFieldTypeInteger",
+        "alias": "FROMMEASURE",
+        "domain": null
+      },
+      {
+        "name": "TOMEASURE",
+        "type": "esriFieldTypeInteger",
+        "alias": "TOMEASURE",
+        "domain": null
+      },
+      {
+        "name": "ROADOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "ROADOID",
+        "domain": null
+      },
+      {
+        "name": "SURFACETYPE",
+        "type": "esriFieldTypeString",
+        "alias": "SURFACETYPE",
+        "domain": null
+      },
+      {
+        "name": "COMPLETEDATE",
+        "type": "esriFieldTypeDate",
+        "alias": "COMPLETEDATE",
+        "domain": null
+      },
+      {
+        "name": "RESOURCEUNITOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "RESOURCEUNITOID",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_StandAgeClass_Salesforce/MapServer/1": {
+    "name": "Active Timbersales",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "TSOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "TSOID",
+        "domain": null
+      },
+      {
+        "name": "HUNTINGOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "HuntingOID",
+        "domain": null
+      },
+      {
+        "name": "UNIQUEKEY",
+        "type": "esriFieldTypeString",
+        "alias": "UniqueKey",
+        "domain": null
+      },
+      {
+        "name": "TS",
+        "type": "esriFieldTypeString",
+        "alias": "TS",
+        "domain": null
+      },
+      {
+        "name": "HUNTINGID",
+        "type": "esriFieldTypeString",
+        "alias": "HuntingID",
+        "domain": null
+      },
+      {
+        "name": "CUTTYPE",
+        "type": "esriFieldTypeString",
+        "alias": "CutType",
+        "domain": null
+      },
+      {
+        "name": "TSSTATUS",
+        "type": "esriFieldTypeString",
+        "alias": "TSStatus",
+        "domain": null
+      },
+      {
+        "name": "OVERLAYACRES",
+        "type": "esriFieldTypeDouble",
+        "alias": "OverlayAcres",
+        "domain": null
+      },
+      {
+        "name": "SHAPE",
+        "type": "esriFieldTypeGeometry",
+        "alias": "shape",
+        "domain": null
+      },
+      {
+        "name": "ESRI_OID",
+        "type": "esriFieldTypeOID",
+        "alias": "ESRI_OID",
+        "domain": null
+      },
+      {
+        "name": "MODIFIEDON",
+        "type": "esriFieldTypeDate",
+        "alias": "MODIFIEDON",
+        "domain": null
+      },
+      {
+        "name": "LASTDATEOFPROCESS",
+        "type": "esriFieldTypeDate",
+        "alias": "LASTDATEOFPROCESS",
+        "domain": null
+      },
+      {
+        "name": "ACTIONFLAG",
+        "type": "esriFieldTypeString",
+        "alias": "ACTIONFLAG",
+        "domain": null
+      },
+      {
+        "name": "ISDELETED",
+        "type": "esriFieldTypeString",
+        "alias": "ISDELETED",
+        "domain": null
+      },
+      {
+        "name": "Type",
+        "type": "esriFieldTypeString",
+        "alias": "Type",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_StandAgeClass_Salesforce/MapServer/2": {
+    "name": "Forest Age-Class",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "tfm.dbo.TFM_INV_STAND_DESC",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "SHAPE",
+        "type": "esriFieldTypeGeometry",
+        "alias": "Shape",
+        "domain": null
+      },
+      {
+        "name": "SHAPE.STArea()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STArea()",
+        "domain": null
+      },
+      {
+        "name": "SHAPE.STLength()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STLength()",
+        "domain": null
+      },
+      {
+        "name": "HuntingOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "HuntingOID",
+        "domain": null
+      },
+      {
+        "name": "HuntingID",
+        "type": "esriFieldTypeString",
+        "alias": "HuntingID",
+        "domain": null
+      },
+      {
+        "name": "StandCategory",
+        "type": "esriFieldTypeString",
+        "alias": "StandCategory",
+        "domain": null
+      },
+      {
+        "name": "GrossAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "GrossAcres",
+        "domain": null
+      },
+      {
+        "name": "Source",
+        "type": "esriFieldTypeString",
+        "alias": "Source",
+        "domain": null
+      },
+      {
+        "name": "SourceDate",
+        "type": "esriFieldTypeDate",
+        "alias": "SourceDate",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_StandAgeClass_Salesforce/MapServer/3": {
+    "name": "Forest Age-Class",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "tfm.dbo.TFM_INV_STAND_DESC",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "SHAPE",
+        "type": "esriFieldTypeGeometry",
+        "alias": "Shape",
+        "domain": null
+      },
+      {
+        "name": "SHAPE.STArea()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STArea()",
+        "domain": null
+      },
+      {
+        "name": "SHAPE.STLength()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STLength()",
+        "domain": null
+      },
+      {
+        "name": "HuntingOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "HuntingOID",
+        "domain": null
+      },
+      {
+        "name": "HuntingID",
+        "type": "esriFieldTypeString",
+        "alias": "HuntingID",
+        "domain": null
+      },
+      {
+        "name": "StandCategory",
+        "type": "esriFieldTypeString",
+        "alias": "StandCategory",
+        "domain": null
+      },
+      {
+        "name": "GrossAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "GrossAcres",
+        "domain": null
+      },
+      {
+        "name": "Source",
+        "type": "esriFieldTypeString",
+        "alias": "Source",
+        "domain": null
+      },
+      {
+        "name": "SourceDate",
+        "type": "esriFieldTypeDate",
+        "alias": "SourceDate",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_StandAgeClass_Salesforce/MapServer/4": {
+    "name": "Forest Age-Class",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "tfm.dbo.TFM_INV_STAND_DESC",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "SHAPE",
+        "type": "esriFieldTypeGeometry",
+        "alias": "Shape",
+        "domain": null
+      },
+      {
+        "name": "SHAPE.STArea()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STArea()",
+        "domain": null
+      },
+      {
+        "name": "SHAPE.STLength()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STLength()",
+        "domain": null
+      },
+      {
+        "name": "HuntingOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "HuntingOID",
+        "domain": null
+      },
+      {
+        "name": "HuntingID",
+        "type": "esriFieldTypeString",
+        "alias": "HuntingID",
+        "domain": null
+      },
+      {
+        "name": "StandCategory",
+        "type": "esriFieldTypeString",
+        "alias": "StandCategory",
+        "domain": null
+      },
+      {
+        "name": "GrossAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "GrossAcres",
+        "domain": null
+      },
+      {
+        "name": "Source",
+        "type": "esriFieldTypeString",
+        "alias": "Source",
+        "domain": null
+      },
+      {
+        "name": "SourceDate",
+        "type": "esriFieldTypeDate",
+        "alias": "SourceDate",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_StandAgeClass_Salesforce/MapServer/5": {
+    "name": "Other",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "tfm.dbo.TFM_INV_STAND_DESC",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "SHAPE",
+        "type": "esriFieldTypeGeometry",
+        "alias": "Shape",
+        "domain": null
+      },
+      {
+        "name": "SHAPE.STArea()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STArea()",
+        "domain": null
+      },
+      {
+        "name": "SHAPE.STLength()",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape.STLength()",
+        "domain": null
+      },
+      {
+        "name": "HuntingOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "HuntingOID",
+        "domain": null
+      },
+      {
+        "name": "HuntingID",
+        "type": "esriFieldTypeString",
+        "alias": "HuntingID",
+        "domain": null
+      },
+      {
+        "name": "StandCategory",
+        "type": "esriFieldTypeString",
+        "alias": "StandCategory",
+        "domain": null
+      },
+      {
+        "name": "GrossAcres",
+        "type": "esriFieldTypeDouble",
+        "alias": "GrossAcres",
+        "domain": null
+      },
+      {
+        "name": "Source",
+        "type": "esriFieldTypeString",
+        "alias": "Source",
+        "domain": null
+      },
+      {
+        "name": "SourceDate",
+        "type": "esriFieldTypeDate",
+        "alias": "SourceDate",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Hosted/INV_STAND_DESC_SOUTH/FeatureServer/0": {
+    "name": "INV_STAND_DESC_SOUTH",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "objectid",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "contextoid",
+        "type": "esriFieldTypeString",
+        "alias": "CONTEXTOID",
+        "domain": null
+      },
+      {
+        "name": "ru",
+        "type": "esriFieldTypeString",
+        "alias": "RU",
+        "domain": null
+      },
+      {
+        "name": "cmptwpdesc",
+        "type": "esriFieldTypeString",
+        "alias": "CMPTWPDESC",
+        "domain": null
+      },
+      {
+        "name": "standname",
+        "type": "esriFieldTypeString",
+        "alias": "STANDNAME",
+        "domain": null
+      },
+      {
+        "name": "county",
+        "type": "esriFieldTypeString",
+        "alias": "COUNTY",
+        "domain": null
+      },
+      {
+        "name": "entityid",
+        "type": "esriFieldTypeString",
+        "alias": "ENTITYID",
+        "domain": null
+      },
+      {
+        "name": "landtype",
+        "type": "esriFieldTypeString",
+        "alias": "LANDTYPE",
+        "domain": null
+      },
+      {
+        "name": "landsubtype",
+        "type": "esriFieldTypeString",
+        "alias": "LANDSUBTYPE",
+        "domain": null
+      },
+      {
+        "name": "plantability",
+        "type": "esriFieldTypeString",
+        "alias": "PLANTABILITY",
+        "domain": null
+      },
+      {
+        "name": "standorigin",
+        "type": "esriFieldTypeString",
+        "alias": "STANDORIGIN",
+        "domain": null
+      },
+      {
+        "name": "currentage",
+        "type": "esriFieldTypeString",
+        "alias": "CURRENTAGE",
+        "domain": null
+      },
+      {
+        "name": "lastharvdate",
+        "type": "esriFieldTypeDate",
+        "alias": "LASTHARVDATE",
+        "domain": null
+      },
+      {
+        "name": "sfwdspecies1",
+        "type": "esriFieldTypeString",
+        "alias": "SFWDSPECIES1",
+        "domain": null
+      },
+      {
+        "name": "sfwdspecies2",
+        "type": "esriFieldTypeString",
+        "alias": "SFWDSPECIES2",
+        "domain": null
+      },
+      {
+        "name": "sfwdspecies3",
+        "type": "esriFieldTypeString",
+        "alias": "SFWDSPECIES3",
+        "domain": null
+      },
+      {
+        "name": "sfwdsize",
+        "type": "esriFieldTypeString",
+        "alias": "SFWDSIZE",
+        "domain": null
+      },
+      {
+        "name": "sfwddensity",
+        "type": "esriFieldTypeString",
+        "alias": "SFWDDENSITY",
+        "domain": null
+      },
+      {
+        "name": "hdwdspecies1",
+        "type": "esriFieldTypeString",
+        "alias": "HDWDSPECIES1",
+        "domain": null
+      },
+      {
+        "name": "hdwdspecies2",
+        "type": "esriFieldTypeString",
+        "alias": "HDWDSPECIES2",
+        "domain": null
+      },
+      {
+        "name": "hdwdspecies3",
+        "type": "esriFieldTypeString",
+        "alias": "HDWDSPECIES3",
+        "domain": null
+      },
+      {
+        "name": "hdwdsize",
+        "type": "esriFieldTypeString",
+        "alias": "HDWDSIZE",
+        "domain": null
+      },
+      {
+        "name": "hdwdheight",
+        "type": "esriFieldTypeString",
+        "alias": "HDWDHEIGHT",
+        "domain": null
+      },
+      {
+        "name": "hdwddensity",
+        "type": "esriFieldTypeString",
+        "alias": "HDWDDENSITY",
+        "domain": null
+      },
+      {
+        "name": "strata",
+        "type": "esriFieldTypeString",
+        "alias": "STRATA",
+        "domain": null
+      },
+      {
+        "name": "understory",
+        "type": "esriFieldTypeString",
+        "alias": "UNDERSTORY",
+        "domain": null
+      },
+      {
+        "name": "seedlot",
+        "type": "esriFieldTypeString",
+        "alias": "SEEDLOT",
+        "domain": null
+      },
+      {
+        "name": "siteprep",
+        "type": "esriFieldTypeString",
+        "alias": "SITEPREP",
+        "domain": null
+      },
+      {
+        "name": "expressedsi",
+        "type": "esriFieldTypeSingle",
+        "alias": "EXPRESSEDSI",
+        "domain": null
+      },
+      {
+        "name": "expressedsibaseage",
+        "type": "esriFieldTypeSmallInteger",
+        "alias": "EXPRESSEDSIBASEAGE",
+        "domain": null
+      },
+      {
+        "name": "expressedsispecies",
+        "type": "esriFieldTypeString",
+        "alias": "EXPRESSEDSISPECIES",
+        "domain": null
+      },
+      {
+        "name": "preferredspecies",
+        "type": "esriFieldTypeString",
+        "alias": "PREFERREDSPECIES",
+        "domain": null
+      },
+      {
+        "name": "lastpcttype",
+        "type": "esriFieldTypeString",
+        "alias": "LASTPCTTYPE",
+        "domain": null
+      },
+      {
+        "name": "lastpctdate",
+        "type": "esriFieldTypeDate",
+        "alias": "LASTPCTDATE",
+        "domain": null
+      },
+      {
+        "name": "lastferttype",
+        "type": "esriFieldTypeString",
+        "alias": "LASTFERTTYPE",
+        "domain": null
+      },
+      {
+        "name": "lastfertdate",
+        "type": "esriFieldTypeDate",
+        "alias": "LASTFERTDATE",
+        "domain": null
+      },
+      {
+        "name": "lastthintype",
+        "type": "esriFieldTypeString",
+        "alias": "LASTTHINTYPE",
+        "domain": null
+      },
+      {
+        "name": "lastthindate",
+        "type": "esriFieldTypeDate",
+        "alias": "LASTTHINDATE",
+        "domain": null
+      },
+      {
+        "name": "lastreleasetype",
+        "type": "esriFieldTypeString",
+        "alias": "LASTRELEASETYPE",
+        "domain": null
+      },
+      {
+        "name": "lastreleasedate",
+        "type": "esriFieldTypeDate",
+        "alias": "LASTRELEASEDATE",
+        "domain": null
+      },
+      {
+        "name": "grossacres",
+        "type": "esriFieldTypeDouble",
+        "alias": "GROSSACRES",
+        "domain": null
+      },
+      {
+        "name": "netacres",
+        "type": "esriFieldTypeDouble",
+        "alias": "NETACRES",
+        "domain": null
+      },
+      {
+        "name": "polygonpartcount",
+        "type": "esriFieldTypeInteger",
+        "alias": "POLYGONPARTCOUNT",
+        "domain": null
+      },
+      {
+        "name": "maplabel",
+        "type": "esriFieldTypeString",
+        "alias": "MAPLABEL",
+        "domain": null
+      },
+      {
+        "name": "gydate",
+        "type": "esriFieldTypeDate",
+        "alias": "GYDATE",
+        "domain": null
+      },
+      {
+        "name": "ba",
+        "type": "esriFieldTypeSingle",
+        "alias": "BA",
+        "domain": null
+      },
+      {
+        "name": "ptpa",
+        "type": "esriFieldTypeDouble",
+        "alias": "PTPA",
+        "domain": null
+      },
+      {
+        "name": "htpa",
+        "type": "esriFieldTypeDouble",
+        "alias": "HTPA",
+        "domain": null
+      },
+      {
+        "name": "ptons",
+        "type": "esriFieldTypeDouble",
+        "alias": "PTONS",
+        "domain": null
+      },
+      {
+        "name": "htons",
+        "type": "esriFieldTypeDouble",
+        "alias": "HTONS",
+        "domain": null
+      },
+      {
+        "name": "modifiedby",
+        "type": "esriFieldTypeString",
+        "alias": "MODIFIEDBY",
+        "domain": null
+      },
+      {
+        "name": "modifiedusing",
+        "type": "esriFieldTypeString",
+        "alias": "MODIFIEDUSING",
+        "domain": null
+      },
+      {
+        "name": "globalid",
+        "type": "esriFieldTypeGlobalID",
+        "alias": "GlobalID",
+        "domain": null
+      },
+      {
+        "name": "estabdate",
+        "type": "esriFieldTypeDate",
+        "alias": "ESTABDATE",
+        "domain": null
+      },
+      {
+        "name": "modifiedon",
+        "type": "esriFieldTypeDate",
+        "alias": "MODIFIEDON",
+        "domain": null
+      },
+      {
+        "name": "SHAPE__Length",
+        "type": "esriFieldTypeDouble",
+        "alias": "SHAPE__Length",
+        "domain": null
+      },
+      {
+        "name": "SHAPE__Area",
+        "type": "esriFieldTypeDouble",
+        "alias": "SHAPE__Area",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Query,Sync",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_OnX/MapServer/0": {
+    "name": "HuntingRLU",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "RLUOID",
+        "type": "esriFieldTypeOID",
+        "alias": "RLUOID",
+        "domain": null
+      },
+      {
+        "name": "RLUNUMBER",
+        "type": "esriFieldTypeString",
+        "alias": "RLUNumber",
+        "domain": null
+      },
+      {
+        "name": "RLUACRES",
+        "type": "esriFieldTypeDouble",
+        "alias": "RLUAcres",
+        "domain": null
+      },
+      {
+        "name": "URL",
+        "type": "esriFieldTypeString",
+        "alias": "URL",
+        "domain": null
+      },
+      {
+        "name": "PHONE",
+        "type": "esriFieldTypeString",
+        "alias": "Phone",
+        "domain": null
+      },
+      {
+        "name": "SHAPE",
+        "type": "esriFieldTypeGeometry",
+        "alias": "shape",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/Hunting_RLU_OnX/MapServer/1": {
+    "name": "HuntingPermits",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "RLUOID",
+        "type": "esriFieldTypeOID",
+        "alias": "RLUOID",
+        "domain": null
+      },
+      {
+        "name": "RLUNUMBER",
+        "type": "esriFieldTypeString",
+        "alias": "RLUNumber",
+        "domain": null
+      },
+      {
+        "name": "RLUACRES",
+        "type": "esriFieldTypeDouble",
+        "alias": "RLUAcres",
+        "domain": null
+      },
+      {
+        "name": "URL",
+        "type": "esriFieldTypeString",
+        "alias": "URL",
+        "domain": null
+      },
+      {
+        "name": "PHONE",
+        "type": "esriFieldTypeString",
+        "alias": "Phone",
+        "domain": null
+      },
+      {
+        "name": "SHAPE",
+        "type": "esriFieldTypeGeometry",
+        "alias": "shape",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Map,Query,Data",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/PA_TwnRngSec/FeatureServer/0": {
+    "name": "Section",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "tfm.dbo.TFM_INF_SECTION",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "MODIFIEDBY",
+        "type": "esriFieldTypeString",
+        "alias": "MODIFIEDBY",
+        "domain": null
+      },
+      {
+        "name": "MODIFIEDON",
+        "type": "esriFieldTypeDate",
+        "alias": "MODIFIEDON",
+        "domain": null
+      },
+      {
+        "name": "MODIFIEDUSING",
+        "type": "esriFieldTypeString",
+        "alias": "MODIFIEDUSING",
+        "domain": null
+      },
+      {
+        "name": "CREATEDBY",
+        "type": "esriFieldTypeString",
+        "alias": "CREATEDBY",
+        "domain": null
+      },
+      {
+        "name": "CREATEDON",
+        "type": "esriFieldTypeDate",
+        "alias": "CREATEDON",
+        "domain": null
+      },
+      {
+        "name": "CREATEDUSING",
+        "type": "esriFieldTypeString",
+        "alias": "CREATEDUSING",
+        "domain": null
+      },
+      {
+        "name": "INSTANCEID",
+        "type": "esriFieldTypeString",
+        "alias": "INSTANCEID",
+        "domain": null
+      },
+      {
+        "name": "DOCUMENTKEY",
+        "type": "esriFieldTypeInteger",
+        "alias": "DOCUMENTKEY",
+        "domain": null
+      },
+      {
+        "name": "COMMENTS",
+        "type": "esriFieldTypeString",
+        "alias": "COMMENTS",
+        "domain": null
+      },
+      {
+        "name": "IMPORTERPK",
+        "type": "esriFieldTypeString",
+        "alias": "IMPORTERPK",
+        "domain": null
+      },
+      {
+        "name": "IMPORTERFK",
+        "type": "esriFieldTypeString",
+        "alias": "IMPORTERFK",
+        "domain": null
+      },
+      {
+        "name": "TFM_DATAMIGRATIONKEY",
+        "type": "esriFieldTypeString",
+        "alias": "TFM_DATAMIGRATIONKEY",
+        "domain": null
+      },
+      {
+        "name": "RESOURCEUNITOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "RESOURCEUNITOID",
+        "domain": null
+      },
+      {
+        "name": "SECTIONNUMBER",
+        "type": "esriFieldTypeInteger",
+        "alias": "SECTIONNUMBER",
+        "domain": null
+      },
+      {
+        "name": "TOWNSHIP",
+        "type": "esriFieldTypeString",
+        "alias": "TOWNSHIP",
+        "domain": null
+      },
+      {
+        "name": "NORTHING",
+        "type": "esriFieldTypeString",
+        "alias": "NORTHING",
+        "domain": null
+      },
+      {
+        "name": "RANGE",
+        "type": "esriFieldTypeString",
+        "alias": "RANGE",
+        "domain": null
+      },
+      {
+        "name": "EASTING",
+        "type": "esriFieldTypeString",
+        "alias": "EASTING",
+        "domain": null
+      },
+      {
+        "name": "SECTION",
+        "type": "esriFieldTypeString",
+        "alias": "SECTION",
+        "domain": null
+      },
+      {
+        "name": "LEGAL",
+        "type": "esriFieldTypeString",
+        "alias": "LEGAL",
+        "domain": null
+      },
+      {
+        "name": "GISACRES",
+        "type": "esriFieldTypeDouble",
+        "alias": "GISACRES",
+        "domain": null
+      },
+      {
+        "name": "Shape__Area",
+        "type": "esriFieldTypeDouble",
+        "alias": "SHAPE.STArea()",
+        "domain": null
+      },
+      {
+        "name": "Shape__Length",
+        "type": "esriFieldTypeDouble",
+        "alias": "SHAPE.STLength()",
+        "domain": null
+      },
+      {
+        "name": "TOWNSHIPOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "TOWNSHIPOID",
+        "domain": null
+      },
+      {
+        "name": "MERIDIAN",
+        "type": "esriFieldTypeString",
+        "alias": "MERIDIAN",
+        "domain": null
+      },
+      {
+        "name": "COUNTY",
+        "type": "esriFieldTypeString",
+        "alias": "COUNTY",
+        "domain": null
+      },
+      {
+        "name": "STATE_ABBR",
+        "type": "esriFieldTypeString",
+        "alias": "STATE_ABBR",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Query,Create,Update,Delete,Uploads,Editing",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  },
+  "Public/PA_TwnRngSec/FeatureServer/1": {
+    "name": "Township Range",
+    "type": "Feature Layer",
+    "geometryType": "esriGeometryPolygon",
+    "description": "",
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "domain": null
+      },
+      {
+        "name": "MODIFIEDBY",
+        "type": "esriFieldTypeString",
+        "alias": "MODIFIEDBY",
+        "domain": null
+      },
+      {
+        "name": "MODIFIEDON",
+        "type": "esriFieldTypeDate",
+        "alias": "MODIFIEDON",
+        "domain": null
+      },
+      {
+        "name": "MODIFIEDUSING",
+        "type": "esriFieldTypeString",
+        "alias": "MODIFIEDUSING",
+        "domain": null
+      },
+      {
+        "name": "CREATEDBY",
+        "type": "esriFieldTypeString",
+        "alias": "CREATEDBY",
+        "domain": null
+      },
+      {
+        "name": "CREATEDON",
+        "type": "esriFieldTypeDate",
+        "alias": "CREATEDON",
+        "domain": null
+      },
+      {
+        "name": "CREATEDUSING",
+        "type": "esriFieldTypeString",
+        "alias": "CREATEDUSING",
+        "domain": null
+      },
+      {
+        "name": "INSTANCEID",
+        "type": "esriFieldTypeString",
+        "alias": "INSTANCEID",
+        "domain": null
+      },
+      {
+        "name": "DOCUMENTKEY",
+        "type": "esriFieldTypeInteger",
+        "alias": "DOCUMENTKEY",
+        "domain": null
+      },
+      {
+        "name": "COMMENTS",
+        "type": "esriFieldTypeString",
+        "alias": "COMMENTS",
+        "domain": null
+      },
+      {
+        "name": "IMPORTERPK",
+        "type": "esriFieldTypeString",
+        "alias": "IMPORTERPK",
+        "domain": null
+      },
+      {
+        "name": "IMPORTERFK",
+        "type": "esriFieldTypeString",
+        "alias": "IMPORTERFK",
+        "domain": null
+      },
+      {
+        "name": "TFM_DATAMIGRATIONKEY",
+        "type": "esriFieldTypeString",
+        "alias": "TFM_DATAMIGRATIONKEY",
+        "domain": null
+      },
+      {
+        "name": "RESOURCEUNITOID",
+        "type": "esriFieldTypeInteger",
+        "alias": "RESOURCEUNITOID",
+        "domain": null
+      },
+      {
+        "name": "TOWNSHIP",
+        "type": "esriFieldTypeString",
+        "alias": "TOWNSHIP",
+        "domain": null
+      },
+      {
+        "name": "NORTHING",
+        "type": "esriFieldTypeString",
+        "alias": "NORTHING",
+        "domain": null
+      },
+      {
+        "name": "RANGE",
+        "type": "esriFieldTypeString",
+        "alias": "RANGE",
+        "domain": null
+      },
+      {
+        "name": "EASTING",
+        "type": "esriFieldTypeString",
+        "alias": "EASTING",
+        "domain": null
+      },
+      {
+        "name": "MERIDIAN",
+        "type": "esriFieldTypeString",
+        "alias": "MERIDIAN",
+        "domain": null
+      },
+      {
+        "name": "TWPRNG",
+        "type": "esriFieldTypeString",
+        "alias": "TWPRNG",
+        "domain": null
+      },
+      {
+        "name": "GISACRES",
+        "type": "esriFieldTypeDouble",
+        "alias": "GISACRES",
+        "domain": null
+      },
+      {
+        "name": "Shape__Area",
+        "type": "esriFieldTypeDouble",
+        "alias": "SHAPE.STArea()",
+        "domain": null
+      },
+      {
+        "name": "Shape__Length",
+        "type": "esriFieldTypeDouble",
+        "alias": "SHAPE.STLength()",
+        "domain": null
+      }
+    ],
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON, geoJSON, PBF",
+    "capabilities": "Query,Create,Update,Delete,Uploads,Editing",
+    "relationships": [],
+    "supportsPagination": true,
+    "copyrightText": ""
+  }
+}
