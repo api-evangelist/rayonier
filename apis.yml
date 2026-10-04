@@ -28,7 +28,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/rayonier.png
 tags:
 - Timber
-- Real-Estate
+- Real Estate
 - Forest Products
 - Geospatial
 - ArcGIS REST
@@ -44,6 +44,7 @@ tags_raw:
 - Land Management
 - Hunting Leases
 - Forestry
+- Real-Estate
 description: 'Rayonier (NYSE: RYN) is a timberland real estate investment trust owning about 2 million acres in
   the US South and Pacific Northwest. It publishes no developer program, SDK or OpenAPI, but it runs a self-hosted
   ArcGIS Enterprise 11.5 instance at gis.rayonier.com whose Public and Hosted folders — 45 Feature and Map services,
@@ -60,7 +61,7 @@ apis:
   - Geospatial
   - ArcGIS REST
   - Timber
-  - Real-Estate
+  - Real Estate
   - Land Management
   - Hunting Leases
   - Forestry
@@ -74,6 +75,7 @@ apis:
   - Hunting Leases
   - Forestry
   - SOAP
+  - Real-Estate
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://gis.rayonier.com/arcgis/rest/services
   baseURL: https://gis.rayonier.com/arcgis/rest/services
