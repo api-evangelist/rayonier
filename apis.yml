@@ -148,6 +148,10 @@ apis:
   - SOAP/WSDL 1.1 per MapServer
   - No OpenAPI, no OGC WMS/WFS
 common:
+- type: RateLimits
+  url: rate-limits/rayonier-rate-limits.yml
+- type: FinOps
+  url: finops/rayonier-finops.yml
 - type: Website
   url: https://www.rayonier.com
 - type: TermsOfService
