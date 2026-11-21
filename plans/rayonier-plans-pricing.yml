@@ -51,7 +51,7 @@ maintainers:
 generated: '2026-09-17'
 plan_count: 0
 x-canonical:
-  generated: '2026-11-13'
+  generated: '2026-11-20'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - subscription
